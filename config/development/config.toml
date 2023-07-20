@@ -1,0 +1,7 @@
+baseURL = "http://localhost"
+[params]
+  env = "local"
+  hyvorId = "5728"
+  # Site Params
+  logo = "images/logo.png"
+  dateFormat = "26 FEB 1994"

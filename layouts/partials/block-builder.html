@@ -1,0 +1,7 @@
+{{ $page := . }}
+{{ $site := $.Site }}
+{{- with .Params.blocks -}}
+  {{- range . -}}
+    {{- if eq .component "header" -}}{{- partial "components/header" (dict "component" . "context" $page) -}}{{- end -}}
+  {{- end -}}
+{{- end -}}

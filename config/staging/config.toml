@@ -1,0 +1,4 @@
+baseURL = "https://beta.section.io/engineering-education/"
+[params]
+  env = "staging"
+  hyvorId = "5716"

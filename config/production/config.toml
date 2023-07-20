@@ -1,0 +1,4 @@
+baseURL = "https://guruspedia.com"
+[params]
+  env = "production"
+  hyvorId = "5716"

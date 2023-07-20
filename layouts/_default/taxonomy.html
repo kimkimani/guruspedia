@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+  {{ if (where .Site.Pages "Params.type" "articles") }}
+
+    {{ partial "blog/articles-header.html" . }}
+    {{ partial "blog/articles-posts.html" . }}
+
+  {{ end }}
+
+{{ end }}

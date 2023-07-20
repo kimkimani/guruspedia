@@ -1,0 +1,21 @@
+<pre style="overflow-x: scroll;">
+. {{ . }}
+
+params: {{ .Params }}
+
+IsNode {{ .IsNode }}
+
+Kind {{ .Kind }}
+
+Type {{ .Type }}
+
+Section {{ .Section }}
+
+GetPage {{ .Site.GetPage "page" "/" }}
+
+CurrentSection {{ .CurrentSection }}
+
+{{ range .Pages }}
+{{ . }}
+{{ end }}
+</pre>

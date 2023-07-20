@@ -1,0 +1,68 @@
+$container-max-width: pxem(1900);
+$hero-max-width: pxem(1468);
+$inner-max-width: pxem(1320);
+$narrow-max-width: pxem(790);
+
+body,
+html {
+  background: $fill-white;
+  overflow-x: hidden;
+}
+
+.main-wrapper {
+  overflow: hidden;
+}
+
+.section-mega-dropdown::-webkit-scrollbar,
+.section-mega-wrapper::-webkit-scrollbar {
+  display: none;
+  overflow-y: hidden;
+  width: 0;
+  scrollbar-width: none;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: $container-max-width;
+}
+
+.section-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: pxem(890);
+ 
+}
+
+.hero-blocks-inner {
+  flex-direction: column;
+
+  @include mq($from: 700px ) {
+    flex-direction: row;
+  }
+}
+
+.section-hero-container {
+  margin-left: auto;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: $container-max-width;
+  width: 100%;
+}
+.heroimage{
+  margin-left: -40px;
+  object-position: center;
+  @include mq($from: 700px ) {
+    width: 100%;
+  }
+}
+
+.col-half {
+  min-width: 50%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+}

@@ -1,0 +1,87 @@
+<!-- Ranges through content/articles/*.md -->
+<section class="listing-posts">
+  <div class="resource-block-inner flex flex-wrap justify-center">
+    <div class="posts-header">
+    <h3 class="title">RECENT STORIES:</h3>
+    <p class="text text-color">The latest in engineering, computing and
+      technology.</p>
+    </div>
+    <ul class=" listing-posts-items list-unstyled xs-mb-0">
+      {{- $pages := where .Site.Pages "Params.layout" "blog"
+      -}} {{- if .Data.Term -}} {{- $terms := slice .Data.Term }} {{- $pages =
+      where $pages ".Params.topics" "intersect" $terms -}} {{- end -}} {{
+      $paginator := .Paginate $pages 20 }} {{ range $paginator.Pages }}
+
+      <li
+        class="listing-posts-item mix {{ with .Params.tags }}{{ range . }}{{ lower . }} {{ end }}{{ end }}"
+      >
+        <a
+          class="decoration-none resource-block-item"
+          href="{{ .RelPermalink }}"
+        >
+          <div
+            class="resource-block-item-wrap fill-white flex cta-shadow flex-column"
+          >
+            <img src="{{ if eq $.Site.Params.env "local" }}{{ replace (index
+            .Params.images 0).url "/guruspedia" "" }}{{ else }}{{
+            (index .Params.images 0).url }}{{ end }}" {{ if (index
+            .Params.images 0).alt}} alt="{{ (index .Params.images 0).alt }}"{{
+            end }}/>
+
+            <div class="resource-block-item-content flex flex-column">
+              <div class="resource-block-item-content-inner pt-5 pb-5">
+                <div class="listing-posts-textitems">
+                  {{ with .Params.topics }}
+                  <p class="texttopic text-16 text-blockquote xs-mb-6">
+                  #{{ delimit . ", " | title }}
+                  </p>
+                  {{ end }}
+
+                  <p class="textdate text-16 text-blockquote xs-mb-6">
+                    <script>
+                      var date = new Date("{{ .Date }}");
+                      var currentDate = new Date();
+                      var timeDiff = currentDate - date;
+                      var minutes = Math.floor(timeDiff / 60000);
+                      var hours = Math.floor(minutes / 60);
+                      var days = Math.floor(hours / 24);
+                      var months = Math.floor(days / 30);
+                      var years = Math.floor(months / 12);
+
+                      var formattedDate = "";
+                      if (years > 0) {
+                        formattedDate =
+                          years + " year" + (years > 1 ? "s" : "") + " ago";
+                      } else if (months > 0) {
+                        formattedDate =
+                          months + " month" + (months > 1 ? "s" : "") + " ago";
+                      } else if (days > 0) {
+                        formattedDate =
+                          days + " day" + (days > 1 ? "s" : "") + " ago";
+                      } else if (hours > 0) {
+                        formattedDate =
+                          hours + " hour" + (hours > 1 ? "s" : "") + " ago";
+                      } else if (minutes > 0) {
+                        formattedDate =
+                          minutes +
+                          " minute" +
+                          (minutes > 1 ? "s" : "") +
+                          " ago";
+                      } else {
+                        formattedDate = "Just now";
+                      }
+                      document.write(formattedDate);
+                    </script>
+                  </p>
+                </div>
+                <h3 class="title-5.5 text-link xs-mb-10">{{ .Title }}</h3>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</section>
