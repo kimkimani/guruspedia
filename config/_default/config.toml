@@ -15,22 +15,22 @@ pygmentsStyle = "monokai"
    topic = "topics"
    author = "authors"
 [permalinks]
-   engineering-education = "/:slug/"
+   guruspedia = "/:slug/"
    articles = "/:slug/"
    topics = "/topic/:slug/"
 [author]
-  name = "Hector Kambow"
-  email = "enged@section.io"
+  name = "Guru Spedia"
+  email = "guruspedia"
 [params]
   dateformat = "January 2, 2006"
-  description = "Section's Edge as a Service simplifies edge computing for next-gen applications."
+  description = "The latest in technology, computing and engineering."
 [markup.goldmark.renderer]
   unsafe = true
 [social]
-email = "enged@section.io"
-slack = "https://t.co/OANAJYol8Y"
-twitter = "https://twitter.com/sectionio"
-github = "https://github.com/section-io/"
+email = "guruspedia"
+slack = "https://t.co/"
+twitter = "https://twitter.com/"
+github = "https://github.com/"
 [blackfriday]
   plainIDAnchors = true
 [related]
