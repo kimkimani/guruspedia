@@ -6,7 +6,7 @@ url: /cloud-managed-data-center-services/
 title: Understanding the Concept Cloud Managed Data Center Services
 description: Maintaining security and data backup storage are top strategies for protecting data. Data security posture management (DSPM) is a must for organizations. That's why companies turn to cloud managed data center servives to ensure IT systems, applications, and data are available 24/7/365.
 
-date: 2023-07-21T04:25:51-04:00
+date: 2023-07-20T00:00:00-13:00
 
 topics: [Cloud]
 excerpt_separator: <!--more-->
