@@ -32,7 +32,7 @@ There are different approaches you can use and achieve these multi-processing ca
 
 #### Native cluster mode
 
-To achieve horizontal scaling, Node.js creates a cluster to duplicate the application and scale it across the available CPUs. A basic example follows of a default Node.js single thread and a clustered Node.js app at work in a multi-core computer:
+To achieve horizontal scaling, Node.js creates a cluster to duplicate the application and scale it across the available CPUs. The following basic example shows a default Node.js single thread and a clustered Node.js app at work in a multi-core computer:
 
 ![](/the-ultimate-guide-to-nodejs-clutering/nodeje.multi-core-cpus.png)
 
