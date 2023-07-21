@@ -5,7 +5,7 @@ published: true
 url: /google-cloud-identity-platform/
 title: Understanding the Concept of Google Cloud Identity Platform
 description: In this article, we will explore the GCP identity platform, how to get it, and how it compares to other identity and access management solutions while answering questions such as, is GCP an identity provider? Is Google IdP free?.
-date: 2023-07-21T04:25:51-04:00
+date: 2023-07-21T06:25:51-04:00
 topics: [Cloud]
 excerpt_separator: <!--more-->
 images:

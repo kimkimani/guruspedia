@@ -5,7 +5,7 @@ published: true
 url: /the-ultimate-guide-to-nodejs-clutering/
 title: The Ultimate Guide to Node.js Clutering - How to use it in your Apps 
 description: How Node.js creates a cluster to duplicate the application and scale it across the available CPUs with examples thata follows clustered Node.js app at work in a multi-core computer
-date: 2023-07-21T04:25:51-04:00
+date: 2023-07-21T06:25:51-04:00
 topics: [Pragramming, Node.js]
 excerpt_separator: <!--more-->
 images:
