@@ -1,4 +1,3 @@
-# Stage 1: Build the website with Hugo
 FROM nginx:alpine as build
 
 RUN apk add --update \
@@ -15,12 +14,6 @@ WORKDIR /site
 
 RUN hugo --environment production
 
-# Stage 2: Set up Nginx 
+#Copy static files to Nginx
 FROM nginx:alpine
-
-# Copy the custom 404 error page and custom Nginx configuration
-COPY /layouts/404.html /usr/share/nginx/html/404.html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Copy the static files from the build stage
 COPY --from=build /site/public /usr/share/nginx/html
