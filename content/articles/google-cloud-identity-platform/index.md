@@ -52,7 +52,7 @@ The GCP access process provide a formated Google sign-in button to create accoun
 
 It automatically detects verified Google accounts and configures access with an SSO:
 
-![Understanding the Concept of Google Cloud Identity Platform](google-cloud-identity-platform/signnup.png)
+![Understanding the Concept of Google Cloud Identity Platform](/google-cloud-identity-platform/signnup.png)
 
 This process creates a seamless step for the user to access products and services. And if users sign out of the account, they don’t need a password to access back their account. GCP identity platform allows us to access with a single tap to mitigate account access frictions as follows:
 
