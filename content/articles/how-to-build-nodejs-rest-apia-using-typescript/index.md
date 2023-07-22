@@ -3,7 +3,7 @@ layout: blog
 status: publish
 published: true
 url: /how-to-build-nodejs-rest-apia-using-typescript/
-title: How to build Node.js REST APIs using TypeScript
+title: Ultimate Guide to Building Node.js REST APIs using TypeScript
 description: Using this setup, you go through the steps of setting up a Node.js RESTFul API using Typescript.
 date: 2023-07-19T00:00:00-12:00
 topics: [Coding]
