@@ -3,7 +3,7 @@ layout: blog
 status: publish
 published: true
 url: /laravel-user-authentication-with-loginradius-api/
-title: Implimenting Laravel User Authentication
+title: Implimenting Laravel User Authentication Tutorial With Code Examples
 description: In this article, we will implement authentication on a Laravel project while using a LoginRadius Sdk.
 date: 2023-07-22T12:25:23-04:00
 
@@ -12,7 +12,7 @@ excerpt_separator: <!--more-->
 images:
 
   - url: /laravel-user-authentication-with-loginradius-api/hero.png
-    alt: Implimenting Laravel User Authentication
+    alt: Implimenting Laravel User Authentication Tutorial With Code Examples
 
 ---
 
