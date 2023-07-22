@@ -22,7 +22,7 @@ Docker images allow you to easily deploy your applications to different infrastr
 
 Building and pushing large Docker images to a registry such as [DockerHub](https://www.docker.com/products/docker-hub/) and [ECR](https://aws.amazon.com/ecr/) requires a significant amount of time. Additionally, a large image also slows downloads whenever you need to pull the application image from the registry resulting in increased time to build and deploy your application. Lets dive in and learn the best strategies to slim Docker images and how to use them to reduce Docker image size
 
-### prerequisite
+### Prerequisite
 
 To follow along with this guide, ensure:
 
@@ -111,7 +111,7 @@ Each base image you use provides its distributions. Ensure you always check your
 
 While creating the above images, the `COPY . .` command copy all the files and folders present in your project directory. In this simple example, the application has the following structure:
 
-![File Structure](dockerignore.png)
+![File Structure](/how-to-minimize-docker-mages/dockerignore.png)
 
 Looking closely, Docker doesn’t need to copy all these folders and files. For example, the`RUN npm run build` command in the DockerFile will create the application *build* folder, and the `RUN npm install` command will create the *node_modules* folder. Therefore, you don’t need to copy these files while building the Docker image.
 Each folder and file copied add to the size of the image. It is best to avoid unnecessary copy. 
@@ -165,7 +165,7 @@ These new commands add more layers to the Docker image.
 
 On the Docker Desktop in your local machine, navigate to your created image, and you should have a clear view of the image layers as follows:
 
-![An image showing the layers of the Docker image](https://imgur.com/uxvPYrj.png)
+![An image showing the layers of the Docker image](/how-to-minimize-docker-mages/layers.png)
 
 Docker shows that this image has 18 layers. This includes layers used to package the base image. However, you are accountable for ten layers that you can control based on the Dockerfile used to build this image.
 
@@ -186,7 +186,7 @@ CMD npm start
 
 When you build an image based on this, the Image layers will be reduced to 15:
 
-![An image showing a reduced Docker image layers](https://imgur.com/gSxioq2.png)
+![An image showing a reduced Docker image layers](/how-to-minimize-docker-mages/reduced-layers.png)
 
 This drastically reduced the overall image size to 194MB from 266MB:
 
@@ -230,7 +230,7 @@ In this case, the first stage created the application build. This build will be 
 
 In this case, you have one Dockerfile that builds the application for you and create the final production-ready image under one image. As a result, you reduce the number of layers in your image:
 
-![Docker multistage image layers](https://imgur.com/0jVOLIM.png)
+![Docker multistage image layers](/how-to-minimize-docker-mages/multistage.png)
 
 And so the total size of your Docker image:
 
@@ -269,7 +269,7 @@ This is because the `--squash` feature is an experimental feature in Docker. It 
 
 Navigate to your **Docker settings** on the Docker Desktop and enable **experimental** to true as follows:
 
-![Changing Docker Engine experimental settings](https://i.imgur.com/4WyEvAI.png)
+![Changing Docker Engine experimental settings](/how-to-minimize-docker-mages/docker-experimental-settings.png)
 
 The image is further reduced to 162MB:
 
