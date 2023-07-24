@@ -2,6 +2,6 @@
 layout: blog
 status: publish
 published: true
-url: /about/
+url: /contact/
 ---
-This is about page
+This is contact page
