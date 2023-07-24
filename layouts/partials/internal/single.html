@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+
+<article>
+  <section class="hero-blocks xs-pt-10 xs-pb-20 sm-pt-40 sm-pb-30 -blue-blocks">
+    <div class="section-container relative">
+      <div class="hero-blocks-inner relative prl-5">
+      </div>
+    </div>
+  </section>
+
+  <section class="section-rich-text blog-styling xs-pb-10">
+    <div class="">
+      <div class="section-rich-text-inner prl-5">
+        <div class="section-rich-text-leading">{{ .Content }}</div>
+
+        {{ if hugo.Environment | eq "development" }}
+
+        <script type="text/javascript">
+          var images = document.getElementsByTagName("img");
+          for (var i = 0; i < images.length; i++) {
+            images[i].src = images[i].src.replace(
+              "/",
+              "/"
+            );
+          }
+          console.log(images[2].src);
+        </script>
+
+        {{ end }}
+      </div>
+    </div>
+  </section>
+</article>
+
+{{ end }}

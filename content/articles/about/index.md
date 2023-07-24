@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: internal
 status: publish
 published: true
 url: /about/
