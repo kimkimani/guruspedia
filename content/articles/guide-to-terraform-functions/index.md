@@ -5,7 +5,7 @@ published: true
 url: /guide-to-terraform-functions/
 title: Guide to Terraform Functions for Infrastructure Automation - With Examples and Best Practices
 description: In this article, you'll learn all about Terraform functions, with examples and best practices, to help you learn how they can be implemented.
-date: 2023-07-25T04:51:05-04:00
+date: 2023-07-25T04:59:07-04:00
 topics: [DevOps]
 pick: [top]
 excerpt_separator: <!--more-->
