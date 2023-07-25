@@ -1,5 +1,4 @@
 <!-- Ranges through content/articles/*.md -->
-{{ if .Date }}
 <section class="listing-posts">
   <div class="resource-block-inner flex flex-wrap justify-center">
     <div class="posts-header">
@@ -13,6 +12,8 @@
       -}} {{- if .Data.Term -}} {{- $terms := slice .Data.Term }} {{- $pages =
       where $pages ".Params.topics" "intersect" $terms -}} {{- end -}} {{
       $paginator := .Paginate $pages 20 }} {{ range $paginator.Pages }}
+
+      {{ if .Date }}
 
       <li
         class="listing-posts-item mix {{ with .Params.tags }}{{ range . }}{{ lower . }} {{ end }}{{ end }}"
@@ -83,9 +84,9 @@
         </a>
       </li>
       {{ end }}
+      {{ end }}
     </ul>
     {{ template "_internal/pagination.html" . }}
 
   </div>
 </section>
-{{ end }}
