@@ -6,6 +6,7 @@
     <p class="text text-color">The latest in engineering, computing and
       technology.</p>
     </div>
+    {{ if .Date }}
     <ul class=" listing-posts-items list-unstyled xs-mb-0">
       {{- $pages := where .Site.Pages "Params.layout" "blog"
       -}} {{- if .Data.Term -}} {{- $terms := slice .Data.Term }} {{- $pages =
@@ -83,5 +84,6 @@
       {{ end }}
     </ul>
     {{ template "_internal/pagination.html" . }}
+    {{ end }}
   </div>
 </section>
