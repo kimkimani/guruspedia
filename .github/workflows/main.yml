@@ -1,4 +1,4 @@
-name: node_app
+name: GurusPedia.com
 
 on: # specify the build to trigger the automated ci/cd
     push:
