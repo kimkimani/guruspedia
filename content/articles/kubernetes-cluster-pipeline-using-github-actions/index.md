@@ -3,7 +3,7 @@ layout: blog
 status: publish
 published: true
 url: /kubernetes-cluster-pipeline-using-github-actions/
-title: Kubernetes Cluster CI/CD pipeline Deployments using GitHub Actions and EKS
+title: Kubernetes CICD pipeline Deployments using GitHub Actions and EKS
 description: This guide will teach you how to create a GitHub Actions workflow that automates EKS Kubernetes deployment using GitHub.
 date: 2023-07-26T03:28:29-04:00
 topics: [DevOps]
