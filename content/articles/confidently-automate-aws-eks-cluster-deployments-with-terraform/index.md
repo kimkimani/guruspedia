@@ -3,7 +3,7 @@ layout: blog
 status: publish
 published: true
 url: /confidently-automate-aws-eks-cluster-deployments-with-terraform/
-title: Confidently Automate AWS EKS Cluster Deployments with Terraform
+title: Confidently Automate AWS EKS Cluster Deployment with Terraform
 description: Deploy you AWS EKS Cluster using Terraform automatically. Dive into the steps of automating deployment to the EKS cluster with Terraform.
 date: 2023-07-26T03:28:29-04:00
 topics: [DevOps]
