@@ -290,7 +290,7 @@ spec:
 minikube start
 ```
 
-![How to Deploy React Apps to Kubernetes Using Docker](/how-todeploy-react-app-to-kubernetes-using-docker/minikube.png)
+![How to Deploy React Apps to Kubernetes Using Docker](/how-to-deploy-react-app-to-kubernetes-using-docker/minikube.png)
 
 - Then create a deployment using the `kubectl` command:
 
