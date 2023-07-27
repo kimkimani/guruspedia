@@ -43,7 +43,7 @@ You can also jump ahead and get the code used along on this [GitHub repository](
 
 ### What is Pinia
 
-[Pinia](https://pinia.vuejs.org/introduction.html) is a lightweight state management library for Vue.js. Pinia aims to provide a type-safe, more intuitive and easy-to-use API. Vuex inspires it. However, a few crucial benefits make [Pinia the de facto Vuex 5](https://www.vuemastery.com/blog/advantages-of-pinia-vs-vuex/): This include:
+[Pinia](https://pinia.vuejs.org/introduction.html) is a lightweight state management library for Vue.js. Pinia aims to provide a type-safe, more intuitive and easy-to-use API. Vuex inspires it. However, a few crucial benefits make [Pinia the de facto Vuex 5](https://www.vuemastery.com/blog/advantages-of-pinia-vs-vuex/): These include:
 
 - Great support for Typescript. This allows you to write type-safe code with code toolings such as autosuggestion and auto-completion.
 - Pinia includes built-in support for automatically persisting the state of your application to storage, such as local storage or a server. This can be useful for building applications that can pick up where the user left off, even after the page has been refreshed or the user has closed the browser.
