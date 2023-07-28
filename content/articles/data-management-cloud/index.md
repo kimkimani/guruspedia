@@ -11,7 +11,7 @@ excerpt_separator: <!--more-->
 images:
 
   - url: /data-management-cloud/hero.png
-    alt: Data Management Cloud
+    alt: Understanding the Concept of Data Management Cloud
 ---
 
 We are encouraged to have a data management strategy because we could be welcoming damaging risks into our businesses without it. Much business data is unstructured and thus highly prone to security breaches. [Data security posture management (DSPM)](https://www.flowsecurity.com/what-is-dspm-a-comprehensive-overview/) is a must for organizations. That is why we must consider the option of cloud data management.
@@ -27,7 +27,7 @@ Cloud data management can be loosely defined as managing data on the cloud. It i
 
 In trying to understand cloud data management, we may also wonder why it is so important to businesses today. Well, many businesses realize each time that data management on the cloud is essential. It streamlines operations and allows for value extraction from data in a centralized point. Besides, cloud data management eliminates silos, enhances data security, and simplifies operations. With cloud data management, organizations can store their data without the need to invest in expensive infrastructure, hardware, and software. Cloud data management further makes access to data from anywhere possible for the firm's convenience.
 
-![](/data-management-cloud/image1.jpeg)
+![Understanding the Concept of Data Management Cloud](/data-management-cloud/data-management-cloud.jpeg)
 
 [Image Source.](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.datasciencecentral.com%2Fcloud-data-management-a-complete-guide%2F&psig=AOvVaw2u3CGmnjvrEa91KsCkSdWY&ust=1680085528399000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPCf4bu0_v0CFQAAAAAdAAAAABAE)
 
