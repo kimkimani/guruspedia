@@ -15,7 +15,7 @@ images:
     alt: How to use Local Storage using JavaScript
 
 ---
-Local storage is a web storage approach that allows you to store web app data to store and access the data on the client browser. Any data stored using local storage is only accessible to the domain that stores it. The data remains available even after the browser is closed. Basically, local storage uses a key-value store to save data and then retrieve that data later by using the same key used to save the data.
+Local storage is a web storage approach that allows you to store web app data and access it on the client's browser. Any data stored using local storage is only accessible to the domain that stores it. The data remains available even after the browser is closed. Basically, local storage uses a key-value store to save data and then retrieve that data later by using the same key used to save the data.
 <!--more-->
 
 Local storage stores small amounts of data that need to persist even after the browser is closed. Some data that you can save and access using local storage include user preferences and shopping cart information. This article will help you will understand how to use local storage in JavaScript by building a simple notes application. This article assumes you have prior experience working with JavaScript.
