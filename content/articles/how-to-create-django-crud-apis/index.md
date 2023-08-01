@@ -13,9 +13,9 @@ images:
   - url: /how-to-create-django-crud-apis/hero.jpg
     alt: Ultimate Guide to Creating Django REST Framework CRUD APIs
 ---
----
 
 Django is a Python-based open-source web framework. It provides support for handling HTTP requests and responses. This way, you can build APIs-related applications. Django also provides a built-in administrative interface to help you interact with the APIs you have created.
+<!--more-->
 
 Django is built to give you the ability to handle large and complex projects with just a few lines of code. Creating APIs with Django provides you with the Django REST framework. Django REST framework is purposely created to help you streamline the way you create RESTful APIs using Django. This guide will teach you how to build Django RESTful CRUD APIs using the Django REST framework.
 
