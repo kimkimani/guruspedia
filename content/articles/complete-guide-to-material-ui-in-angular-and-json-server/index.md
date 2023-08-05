@@ -9,9 +9,8 @@ date: 2023-08-05T11:21:15-04:00
 topics: [Web, React]
 excerpt_separator: <!--more-->
 images:
-
   - url: /complete-guide-to-material-ui-in-angular-and-json-server/hero.png
-    alt: How to Implement Animations in React Native
+    alt: Complete Guide to Material UI in Angular and JSON-Server
 ---
 
 Material UI provides a huge collection of ready-made components such as buttons, toolbars, icons, inputs, etc. Material UI will make the development process super faster.
