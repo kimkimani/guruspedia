@@ -30,6 +30,9 @@ To proceed in this article, it is helpful to have the following:
 - A basic understanding of how to use [Kubernetes](https://kubernetes.io/docs/concepts/overview/components/) and its components with [Kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) installed.
 - [Docker](https://www.docker.com/) installed on your computer.
 - A demo application ready with a working Dockerfile for packaging and creating the application Docker image.
+
+> [RELATED: Creating Dockerfile: Tips to slim Docker images using Dockerfiles](https://guruspedia.com/how-to-minimize-docker-mages/)
+
 - Ensure you have [Git](https://git-scm.com/downloads) installed and added to PATH.
 - A [DockerHub](https://hub.docker.com/) account.
 
