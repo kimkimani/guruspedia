@@ -32,6 +32,9 @@ To follow along with this tutorial:
 - Ensure you have a basic understanding of [Kubernetes](https://kubernetes.io/docs/home/) and [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 - A ready working application. This can be an application of your choice with all the source code and dependencies required to run it on your local machine. However, you can make use of the application on this [GitHub repository](https://github.com/Rose-stack/GitHub-Actions-K8s)  if you don’t have one.
 - A working knowledge of [Docker](https://earthly.dev/blog/docker-virutal-machines/).
+
+> [RELATED: Creating Dockerfile: Tips to slim Docker images using Dockerfiles](https://guruspedia.com/how-to-minimize-docker-mages/)
+
 - An [IAM user created and configured using AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) as this guide will use the AWS Elastic Kubernetes Serivice (EKS) to provision a Kubernetes cluster.
 Familiarity with [GitHub to host code repositories](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github).
 
