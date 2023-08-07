@@ -3,7 +3,7 @@ layout: blog
 status: publish
 published: true
 url: /consuming-graphqL-api-with-reactjs/
-title: Consuming GraphQL API with React.JS
+title: Consuming GraphQL API with React.js
 description: This article will teach you how to consume your GraphQL API using React.js LIKE A PRO. You will learn how to fetch data in React from a GraphQL API.
 date: 2023-07-29T05:44:03-04:00
 topics: [Coding]
@@ -25,6 +25,8 @@ To continue in this article, it is helpful to have the following:
 - [Nodejs](https://nodejs.org/en/) installed on your computer.
 - Prior experience working with JavaScript and GraphQL.
 - You will require a working GraphQL API. For demonstration purposes, this guide will use this [Fruit GraphQL API](https://fruits-api.netlify.app/graphql) to interact with its data using React.js.
+
+> Relate: Create a [GrapgQL APIs Using Golang](https://guruspedia.com/how-to-create-grapgql-apis-using-golang/).
 
 ### Setting up the application
 
@@ -515,3 +517,11 @@ From your web page, click on add fruit link on the navbar:
 On your fruit's page, you should have a new entry on your app as follows:
 
 ![Consuming GraphQL API with React.JS](/consuming-graphqL-api-with-reactjs/new_fruit_page.png)
+
+### Conclusion
+
+Now that you have mastered Consuming GraphQL API with React.js, why not dive deeper and learn the [Complete Guide to Creating Flask APIs with React apps](https://guruspedia.com/a-complete-guide-to-creating-flask-apis-react-apps/) and use Flask API to consume data with React. 
+
+Or do you want to take your React skills to a new height? Learn [How to Build and Implement Infinite Scroll in React Apps](https://guruspedia.com/how-to-build-and-implement-infinite-scroll-in-react-apps/). Get crazier learning this [Definitive Guide to Internationalization in React.js using react-i18next](https://guruspedia.com/how-to-setup-internationalization-in-reactjs-using-react-18next/) 
+
+You will love it!

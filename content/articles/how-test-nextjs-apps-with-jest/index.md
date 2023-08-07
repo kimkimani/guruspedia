@@ -3,13 +3,12 @@ layout: blog
 status: publish
 published: true
 url: /how-test-nextjs-apps-with-jest/
-title: How Test Next.js Applications with Jest
+title: How to Test Next.js Applications with Jest
 description: Learn how to use the Jest testing framework and carry out unit testing for Next.js apps. One of the best frameworks for Next.js tests is Jest. Tests are used to describe the expected behavior of a piece of code.
 date: 2023-08-01T09:24:55-04:00
 topics: [Coding, Web]
 excerpt_separator: <!--more-->
 images:
-
   - url: /how-test-nextjs-apps-with-jest/hero.png
     alt: How Test Next.js Applications with Jest
 ---
@@ -196,7 +195,7 @@ You can re-run your application to test if this works as expected:
 npm run dev
 ```
 
-![How Test Next.js Applications with Jest](app.png)
+![How to Test Next.js Applications with Jest](app.png)
 
 ### Carry out tests
 
@@ -319,6 +318,8 @@ npm test
 As you see, the test passed as expected. This component is executed correctly. These tests show you how your components are being rendered to the user.
 
 ![](tests.png)
+
+Now that you have mastered How to Test Next.js Applications with Jest, why not dive deeper and take your Next.js skills to new heights and learn [How to Create a Next.js Markdown Blog using MDX and TailwindCSS](https://guruspedia.com/creating-nextjs-markdown-blog-using-mdx-and-tailwindcss/)? You will love it.
 
 ### Conclusion
 

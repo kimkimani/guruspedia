@@ -220,6 +220,8 @@ public class NotificationView extends AppCompatActivity {
 
 ![How to Create Android Notifications Like a PRO](/how-to-create-android-notifications/image3.png)
 
+Now that you have mastered How to Create Android Notifications, why not dive deeper, and get more outlandish learning [A Complete Guide to Making API Calls in Android using Retrofit](https://guruspedia.com/complete-guide-to-making-api-calls-in-android-using-retrofit/) and take your Android skills to a new height? 
+
 #### Conclusion
 
 In this article, we have successfully created a Notification for an Android application. We learned how to set notification properties. We have created our notification and learned to customize our Android notification icon, text, and title. We have also learned to set priority and Android auto-cancel on the notification. Why Not dive in and learn this [Guide to Making API Calls in Android using Retrofit](https://guruspedia.com/complete-guide-to-making-api-calls-in-android-using-retrofit/)

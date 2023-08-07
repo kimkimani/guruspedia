@@ -30,6 +30,8 @@ This guide will help you implement infinite scroll to your React applications.
 - Have Node.js runtime installed on your computer.
 - Basic knowledge of creating and running applications using React.js.
 
+> Related: [Build a Node.js Express Server for React Apps](https://guruspedia.com/how-to-set-up-nodejs-express-server-for-react-app/).
+
 ### Setting up a React application
 
 To set up a React application, create a directory where you want your app to live. Then run the following `create-react-app` command inside this directory:
@@ -362,5 +364,9 @@ function InfiScroll() {
 export default InfiScroll
 
 ```
+
+### Conclusion
+
+Now that you have mastered Consuming GraphQL API with React.js, why not dive deeper and take your React skills to a new height learning the [Complete Guide to Creating Flask APIs with React apps](https://guruspedia.com/a-complete-guide-to-creating-flask-apis-react-apps/) and use Flask API to consume data with React. Get crazier learning this [Definitive Guide to Internationalization in React.js using react-i18next](https://guruspedia.com/how-to-setup-internationalization-in-reactjs-using-react-18next/). You will love it!
 
 I hope you found this helpful. Happy coding!

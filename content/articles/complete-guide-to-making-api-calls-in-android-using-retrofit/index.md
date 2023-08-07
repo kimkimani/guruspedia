@@ -72,11 +72,11 @@ yarn develop
 
 Finally, navigate to `http://localhost:1337/admin`. Using either of the above methods, a Strapi Dashboard will be launched on your browser.
 
-![](/complete-guide-to-making-api-calls-in-android-using-retrofit/strapi.png)
+![Making API Calls in Android using Retrofit](/complete-guide-to-making-api-calls-in-android-using-retrofit/strapi.png)
 
 Go ahead and provide the registration credentials to access the Dashboard workspace panel and start managing the content using Strapi.
 
-![](/complete-guide-to-making-api-calls-in-android-using-retrofit/dashboard.png)
+![Making API Calls in Android using Retrofit](/complete-guide-to-making-api-calls-in-android-using-retrofit/dashboard.png)
 
 Note: The above quickstart selection will create a Strapi backend using SQLite as the default database. If you want to use a different database architecture, you can still do that using Strapi. Strapi supports major databases such as MongoDB, MySQL, PostgreSQL, and MariaDB. To set Strapi with the database of your choice, ensure you select **Custom (manual settings)**, which will allow you to choose your preferred database.
 
@@ -86,11 +86,11 @@ Once Strapi is up and running, you only need to add the data models you consume 
 
 First, navigate to the **Content-Type Builder** section and **Create new collection type**.
 
-![](/complete-guide-to-making-api-calls-in-android-using-retrofit/content-type.png)
+![Making API Calls in Android using Retrofit](/complete-guide-to-making-api-calls-in-android-using-retrofit/content-type.png)
 
 Proceed and provide the Configurations for your task collection as follows.
 
-![](/complete-guide-to-making-api-calls-in-android-using-retrofit/collection.png)
+![Making API Calls in Android using Retrofit](/complete-guide-to-making-api-calls-in-android-using-retrofit/collection.png)
 
 Strapi will use this naming to generate the API routes and database tables/collections.
 
@@ -132,13 +132,13 @@ Navigate to the **Content Manager** section and click **Create new entry** on yo
 
 Create a new entry as follows:
 
-![](/complete-guide-to-making-api-calls-in-android-using-retrofit/new-entry.png)
+![Making API Calls in Android using Retrofit](/complete-guide-to-making-api-calls-in-android-using-retrofit/new-entry.png)
 
 Click **Save** to add the entry to the draft list and finally, click **Publish** to make the entry accessible outside Strapi.
 
 Using the above method as an example, add a couple of Tasks entries to your Strapi CMS backend. You should have a list of tasks as such:
 
-![](/complete-guide-to-making-api-calls-in-android-using-retrofit/entries.png)
+![Making API Calls in Android using Retrofit](/complete-guide-to-making-api-calls-in-android-using-retrofit/entries.png)
 
 ### Creating the API Access Token
 
@@ -146,21 +146,21 @@ Now, to access the data, we need to allow access from the Strapi workspace. Ther
 
 Navigate to the **Setting** section and select API tokens.
 
-![](/complete-guide-to-making-api-calls-in-android-using-retrofit/token.png)
+![Making API Calls in Android using Retrofit](/complete-guide-to-making-api-calls-in-android-using-retrofit/token.png)
 
 Click **Create new API Token** and set a new token as follows:
 
-![](/complete-guide-to-making-api-calls-in-android-using-retrofit/create-token.png)
+![Making API Calls in Android using Retrofit](/complete-guide-to-making-api-calls-in-android-using-retrofit/create-token.png)
 
 Finally, click **Save**. This will generate an API token allowing you to access your backend securely.
 
-![](/complete-guide-to-making-api-calls-in-android-using-retrofit/generated-token.png)
+![Making API Calls in Android using Retrofit](/complete-guide-to-making-api-calls-in-android-using-retrofit/generated-token.png)
 
 Ensure to copy this token. You won’t be able to see it again once you navigate outside this page for security reasons.
 
 Finally, navigate to **Settings** → **Roles** and set the role of **Public** Permissions as follows:
 
-![](/complete-guide-to-making-api-calls-in-android-using-retrofit/permissions.png)
+!Making API Calls in Android using Retrofit](/complete-guide-to-making-api-calls-in-android-using-retrofit/permissions.png)
 
 Note: each permission displays a Bound route to the backend: For example:
 
@@ -179,7 +179,7 @@ Let’s dive and consume this backend in android using the Retrofit library.
 
 Go ahead and launch your Android Studio. Create a new project using an Empty Activity. Click Next and set up your application as follows:
 
-![](/complete-guide-to-making-api-calls-in-android-using-retrofit/android.png)
+![Making API Calls in Android using Retrofit](/complete-guide-to-making-api-calls-in-android-using-retrofit/android.png)
 
 We will build this application using Java. Ensure you select it as such.
 
@@ -219,7 +219,7 @@ Using Retrofit, we will connect the Backend(Strapi) with the Frontend (Android).
 
 First, create a new model and name it `Api`.
 
-![](/complete-guide-to-making-api-calls-in-android-using-retrofit/package.png)
+![Making API Calls in Android using Retrofit](/complete-guide-to-making-api-calls-in-android-using-retrofit/package.png)
 
 Inside this package, create a new Java class file and call it `ApiClient`. Here we will create the HTTP client used for requests and responses.
 
@@ -240,7 +240,7 @@ private static final String token = "your_strapi_api_token"
 
 The server is running locally; therefore, we will use the local host domain that maps to the port `1337` running the Strapi backend. Note: when using android studio, the URL `http://localhost:1337/` won’t work. Use your local IP address instead. To get this IP, run `ipconfig` on your terminal:
 
-![](/complete-guide-to-making-api-calls-in-android-using-retrofit/ipconfig.png)
+![Making API Calls in Android using Retrofit](/complete-guide-to-making-api-calls-in-android-using-retrofit/ipconfig.png)
 
 Copy the IPv4 Address and replace it with the localhost keyword, i.e., `http://192.168.100.8:1337/`.
 

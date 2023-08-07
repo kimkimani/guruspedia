@@ -3,7 +3,7 @@ layout: blog
 status: publish
 published: true
 url: /best-performance-practices-for-scaling-nodejs-applications/
-title: Best Performance Practices for Scaling Node.js applications:Boosting Node.js app
+title: Best Performance Practices for Scaling Node.js applications - Boosting Node.js app
 description: This guide covers the best practices and solutions in hand for scaling Node.js apps. Buckle up and get ready to boost your Node.js APIs like a pro.
 date: 2023-07-20T00:00:00-01:00
 topics: [Performace]
@@ -12,7 +12,7 @@ excerpt_separator: <!--more-->
 images:
 
   - url: /best-performance-practices-for-scaling-nodejs-applications/hero.png
-    alt: Scaling Nodejs applications Boosting Nodejs app
+    alt: Scaling Nodejs applications - Boosting Nodejs apps
 ---
 Scalability is a broad and inclusive concept, tailored for diverse contexts and applications. This guide covers the best practices and solutions in hand for scaling Node.js apps. Buckle up and get ready to boost your Node.js APIs like a pro.
 <!--more-->
@@ -35,12 +35,11 @@ The idea behind horizontal scaling is to duplicate your application instance to 
 
 There are different approaches you can use and achieve these multi-processing capabilities in your Node.js apps. We’ll examine native cluster mode (which is built-in to Node.js and needs no extra library) and PM2.
 
-
 #### Native cluster mode
 
 To achieve horizontal scaling, Node.js creates a cluster to duplicate the application and scale it across the available CPUs. The following basic example shows a default Node.js single thread and a clustered Node.js app at work in a multi-core computer:
 
-![](/best-performance-practices-for-scaling-nodejs-applications/nodeje.multi-core-cpus.png)
+![Scaling Nodejs applications - Boosting Nodejs apps](/best-performance-practices-for-scaling-nodejs-applications/nodeje.multi-core-cpus.png)
 
 Clustering is an excellent and robust approach to multi-processing, running more than one Node instance. With multiple Node instances, you have numerous main threads. Thus even if one of the threads gets overloaded or crashes, the incoming requests are still handled by other threads.
 
@@ -77,11 +76,11 @@ app.listen(3000, () => console.log("App listening on port 3000"))
 
 Note that the first request iterates over a large number and can take some time to execute. In contrast, another returns a simple basic request. You can test both endpoints using Postman. Sending a request to `http://localhost:3000/heavytask` blocks the application execution thread.
 
-![](/best-performance-practices-for-scaling-nodejs-applications/heavytask.png)
+![Scaling Nodejs applications - Boosting Nodejs apps](/best-performance-practices-for-scaling-nodejs-applications/heavytask.png)
 
 Thus, sending a subsequent request to `http://localhost:3000/ligttask` won't return the expected response until the server finishes processing the first task and releases the CPU that handles both requests.
 
-![](/best-performance-practices-for-scaling-nodejs-applications/lighttask.png)
+![Scaling Nodejs applications - Boosting Nodejs apps](/best-performance-practices-for-scaling-nodejs-applications/lighttask.png)
 
 ```javascript
 To solve this problem, you can use the cluster module as follows:
@@ -132,7 +131,7 @@ if(cluster.isMaster){
 
 Go ahead and run the above script. In my case, I have the following results.
 
-![](/best-performance-practices-for-scaling-nodejs-applications/cpus.png)
+![Scaling Nodejs applications - Boosting Nodejs apps](/best-performance-practices-for-scaling-nodejs-applications/cpus.png)
 
 The computer has 8 cores. They are all mapped to the same port and ready to listen for connections. Each core used runs Google’s V8 engine, letting your application run even faster. If you test the endpoint again, the light task will be executed immediately while the heavy task is being handled by the core it is assigned to.
 
@@ -159,7 +158,7 @@ Go ahead and run the server. Then run the following command to stimulate [Autoca
 npx autocannon -c 100 -a 10000 http://localhost:3000/
 ```
 
-![](/best-performance-practices-for-scaling-nodejs-applications/report.png)
+![Scaling Nodejs applications - Boosting Nodejs apps](/best-performance-practices-for-scaling-nodejs-applications/report.png)
 
 It took about 7 seconds to execute 10,000 requests. Let’s see whether there is any change when you use clustering on a 4-core computer.
 
@@ -196,7 +195,7 @@ if(cluster.isMaster){
 }
 ```
 
-![](/best-performance-practices-for-scaling-nodejs-applications/reportfast.png)
+![Scaling Nodejs applications - Boosting Nodejs apps](/best-performance-practices-for-scaling-nodejs-applications/reportfast.png)
 
 You can significantly note the change here. It took the server only 3 seconds to handle 10,000 requests.
 
@@ -222,7 +221,7 @@ This approach is comparable to how the cluster module directs traffic to the chi
 
 To scale across multiple machines, you need a [load balancer](https://medium.com/techintoo/load-balancing-node-js-51b854fb4f4f). An algorithm for distributing priorities and identifying the server with the least workload(traffic) or the quickest response time.
 
-![](/best-performance-practices-for-scaling-nodejs-applications/loadbalancer.png)
+![Scaling Nodejs applications - Boosting Nodejs apps](/best-performance-practices-for-scaling-nodejs-applications/loadbalancer.png)
 
 A load balancer serves as your "traffic cop" in front of your servers. It distributes client requests across all servers capable of handling them. This simultaneously optimizes speed and greater resilience.
 
@@ -232,19 +231,19 @@ A load balancer achieves this by ensuring no server is overwhelmed, which could 
 
 ### Containerization to the rescue
 
-Containers are lightweight operating systems that run as a form of virtualization.
+[Containers](https://guruspedia.com/understanding-the-concept-of-containers-and-containerization/) are lightweight operating systems that run as a form of virtualization.
 
 To understand how applications can benefit from this infrastructure, take an example of the old classic vitalization approach. Once you have an app ready for production, you push it to a virtual machine on some host system. But to spin up this virtual machine, you need the following machine bare metals.
 
-![](/best-performance-practices-for-scaling-nodejs-applications/baremetals.png)
+![Scaling Nodejs applications - Boosting Nodejs apps](/best-performance-practices-for-scaling-nodejs-applications/baremetals.png)
 
 To depoly the application, you need a guest OS to spin up the virtual application. On top of that, you add some binaries and libraries to support your Node.js application.
 
-![](/best-performance-practices-for-scaling-nodejs-applications/node-virtul.png)
+![Scaling Nodejs applications - Boosting Nodejs apps](/best-performance-practices-for-scaling-nodejs-applications/node-virtul.png)
 
 Once in production, you need to ensure the scalability of this application. Here we'll create two additional copies of the application.
 
-![](/best-performance-practices-for-scaling-nodejs-applications/guestvms.png)
+![Scaling Nodejs applications - Boosting Nodejs apps](/best-performance-practices-for-scaling-nodejs-applications/guestvms.png)
 
 Even though this can be a lightweight application, to create additional VMs, you have to deploy that guest OS, binaries, and libraries for each instance of the application. Here you can assume that you will have consumed all of the resources for this particular hardware.
 
@@ -256,13 +255,13 @@ Assume that you developed the application on the Windows operating system. If yo
 
 Virtual machines are great for running applications that need OS-level features. However, deploying multiple instances of a single application that has a lightweight system can be hard to manage. You get the picture of how hard it can be to maintain your single Node.js application in such environments.
 
-Containerization comes to the rescue to solve all these problems. Containerization lets you package your applications and run them in isolated environments. This gives you the power to run powerful applications quickly from different computing environments. 
+[Containerization](https://guruspedia.com/understanding-the-concept-of-containers-and-containerization/) comes to the rescue to solve all these problems. Containerization lets you package your applications and run them in isolated environments. This gives you the power to run powerful applications quickly from different computing environments. 
 
 Containerization provides a standardized, lightweight method to deploy your application to diverse infrastructures. In addition, you get a wide range of infrastructures that you can optionally choose to run your applications. Containers make it easier to build, ship, deploy, and scale applications with ease.
 
 The following figure depicts how different Node.js instances can run within a containerized environment.
 
-![](/best-performance-practices-for-scaling-nodejs-applications/container.png)
+![Scaling Nodejs applications - Boosting Nodejs apps](/best-performance-practices-for-scaling-nodejs-applications/container.png)
 
 With containers, you don’t need a guest OS to run your application. The container shares the host’s kernel to run all the individual apps within the container. Resources are shared within the container, and your application consumes less resources. If these container processes aren't actually utilizing the CPU or memory, those shared resources become accessible to the other containers running within that hardware.
 
@@ -296,7 +295,7 @@ The top 10 Container Management Software include:
 
 ### Strategies to scale Node.js
 
-They are many ways to scale an application. A single-instance (monolithic) Node.js app running on a single computer has three ways to scale: cloning, decomposition, and data sharding.
+They are many ways to scale an application. A single-instance (monolithic) Node.js app running on a single computer has three ways to scale: cloning, decomposition, and data sharding. let's learn the [Strategies to scale Node.js](https://guruspedia.com/the-strategies-to-scale-nodejs/)
 
 #### Cloning
 
@@ -373,7 +372,7 @@ Check this [guide](http://woshub.com/too-many-open-files-error-linux/#:~:text=It
 
 [Event loop](https://nodejs.org/ru/docs/guides/event-loop-timers-and-nexttick/) is a Node.js mechanism that handles events efficiently in a continuous loop. Even loop allows Node.js to perform [non-blocking I/O operations](https://nodejs.org/en/docs/guides/blocking-vs-non-blocking/). The following figure offers a simplified overview of the Node.js event loop based on the order of execution. Each process is referred to as a phase of the event loop.
 
-![](/best-performance-practices-for-scaling-nodejs-applications/loop.png)
+![Scaling Nodejs applications - Boosting Nodejs apps](/best-performance-practices-for-scaling-nodejs-applications/loop.png)
 
 Node.js uses the term event loop utilization to indicate the ratio between the amount of time the event loop is active in the event provider and the overall duration of its execution.
 

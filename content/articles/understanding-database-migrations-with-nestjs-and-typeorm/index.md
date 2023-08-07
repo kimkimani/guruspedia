@@ -290,6 +290,7 @@ Your `posts` table schema should be similar to:
 
 ![Understanding database migrations with NestJS and TypeORM](/understanding-database-migrations-with-nestjs-and-typeorm/altered_schema.png)
 
+Now, with the new found knowledge, learn [Prisma ORM with Node.js and PostgreSQL](https://guruspedia.com/prisma-orm-with-nodejs-and-postgresql/)? Prisma allows you to connect to your databases and perform any database-related operation. This will enable you to create applications without manually setting up your database. It migrates and sync it with database of your choice.
 
 ### Conclusion
 

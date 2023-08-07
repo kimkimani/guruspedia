@@ -8,11 +8,12 @@ description: How Node.js creates a cluster to duplicate the application and scal
 date: 2023-07-21T06:25:51-04:00
 topics: [Pragramming, Node.js]
 excerpt_separator: <!--more-->
-images:
+images: 
 
   - url: /the-ultimate-guide-to-nodejs-clutering/hero.png
     alt: The Ultimate Guide to Node.js Clutering
 ---
+
 Clustering is an excellent and robust approach to multi-processing, running more than one Node instance. With multiple Node instances, you have numerous main threads. Thus even if one of the threads gets overloaded or crashes, the incoming requests are still handled by other threads.
 <!--more-->
 
@@ -34,7 +35,7 @@ There are different approaches you can use and achieve these multi-processing ca
 
 To achieve horizontal scaling, Node.js creates a cluster to duplicate the application and scale it across the available CPUs. The following basic example shows a default Node.js single thread and a clustered Node.js app at work in a multi-core computer:
 
-![](/the-ultimate-guide-to-nodejs-clutering/nodeje.multi-core-cpus.png)
+![The Ultimate Guide to Node.js Clutering](/the-ultimate-guide-to-nodejs-clutering/nodeje.multi-core-cpus.png)
 
 To evolve beyond the Node.js default of single-thread execution, a [built-in cluster module](https://nodejs.org/api/cluster.html#cluster) was introduced to allow execution on multiple processor cores. This native module requires just a few extra lines of code. The module duplicates the application to different cores.
 
@@ -69,11 +70,11 @@ app.listen(3000, () => console.log("App listening on port 3000"))
 
 Note that the first request iterates over a large number and can take some time to execute. In contrast, another returns a simple basic request. You can test both endpoints using Postman. Sending a request to `http://localhost:3000/heavytask` blocks the application execution thread.
 
-![](/the-ultimate-guide-to-nodejs-clutering/heavytask.png)
+![The Ultimate Guide to Node.js Clutering](/the-ultimate-guide-to-nodejs-clutering/heavytask.png)
 
 Thus, sending a subsequent request to `http://localhost:3000/ligttask` won't return the expected response until the server finishes processing the first task and releases the CPU that handles both requests.
 
-![](/the-ultimate-guide-to-nodejs-clutering/lighttask.png)
+![The Ultimate Guide to Node.js Clutering](/the-ultimate-guide-to-nodejs-clutering/lighttask.png)
 
 ```javascript
 To solve this problem, you can use the cluster module as follows:
@@ -124,7 +125,7 @@ if(cluster.isMaster){
 
 Go ahead and run the above script. In my case, I have the following results.
 
-![](/the-ultimate-guide-to-nodejs-clutering/cpus.png)
+![The Ultimate Guide to Node.js Clutering](/the-ultimate-guide-to-nodejs-clutering/cpus.png)
 
 The computer has 8 cores. They are all mapped to the same port and ready to listen for connections. Each core used runs Google’s V8 engine, letting your application run even faster. If you test the endpoint again, the light task will be executed immediately while the heavy task is being handled by the core it is assigned to.
 
@@ -151,7 +152,7 @@ Go ahead and run the server. Then run the following command to stimulate [Autoca
 npx autocannon -c 100 -a 10000 http://localhost:3000/
 ```
 
-![](/the-ultimate-guide-to-nodejs-clutering/report.png)
+![The Ultimate Guide to Node.js Clutering](/the-ultimate-guide-to-nodejs-clutering/report.png)
 
 It took about 7 seconds to execute 10,000 requests. Let’s see whether there is any change when you use clustering on a 4-core computer.
 
@@ -188,7 +189,7 @@ if(cluster.isMaster){
 }
 ```
 
-![](/the-ultimate-guide-to-nodejs-clutering/reportfast.png)
+![The Ultimate Guide to Node.js Clutering](/the-ultimate-guide-to-nodejs-clutering/reportfast.png)
 
 You can significantly note the change here. It took the server only 3 seconds to handle 10,000 requests.
 

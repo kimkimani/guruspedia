@@ -268,6 +268,8 @@ MIDDLEWARE = [
 CORS_ORIGIN_ALLOW_ALL = True
 ```
 
+Now that you have mastered Django RESTful CRUD APIs using the Django REST framework, why not dive deeper into Python and learn how to [Creating CRUD APIs in Flask](https://guruspedia.com/how-to-create-crud-apis-in-flask/)? Or get wilder learning this [Complete Guide to Creating Flask APIs with React apps](https://guruspedia.com/a-complete-guide-to-creating-flask-apis-react-apps/) and take your skills to new heights.
+
 ### Conclusion
 
 This tutorial has wrapped everything you need to understand Django while creating straightforward Django REST APIs. I hope you found it useful.

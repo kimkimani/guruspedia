@@ -449,4 +449,10 @@ From your Postman, send a DELETE request to `http://localhost:3000/api/notes/del
 
 ![How to build Node.js REST APIs using TypeScript](/how-to-build-nodejs-rest-apia-using-typescript/deleting_notes.png)
 
-And there, you have a complete Node.js Typescript RESTFul API, and I hope you found it helpful.
+### Conclusion
+
+And there, you have a complete Node.js Typescript RESTFul API.
+
+Now, you have gained confidence in Building Node.js REST APIs using TypeScript. Why not dive deeper and learn how to consume this API? This [How to Build a Node.js Express Server for React Apps](https://guruspedia.com/how-to-set-up-nodejs-express-server-for-react-app/) takes your ride to new heights.
+
+I hope you found it helpful

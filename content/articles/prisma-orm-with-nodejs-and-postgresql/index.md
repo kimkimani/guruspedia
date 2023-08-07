@@ -4,7 +4,7 @@ status: publish
 published: true
 url: /prisma-orm-with-nodejs-and-postgresql/
 title: Using Prisma ORM with Node.js and PostgreSQL
-description: In this tutorial, you will run how to run Prisma with a Node.js PostgreSQL Project, A COMPLETE GUIDE.
+description: In this tutorial, you will learn how to run Prisma with a Node.js PostgreSQL Project, A COMPLETE GUIDE.
 date: 2023-07-29T05:44:03-04:00
 topics: [Coding]
 excerpt_separator: <!--more-->
@@ -17,7 +17,7 @@ images:
 Prisma is a Node.js and typescript ORM. an ORM that means Object Relational Mapping tool that can communicate with databases such as MongoDB, MySQL PostgreSQL, SQLite, etc.
 <!--more-->
 
-Prisma allows you to connect to your databases and perform any database-related operation. This will enable you to create applications without manually setting up your database. Prisma handles this for you. With just a few lines of code, your data will be published to the database of your choice. In this tutorial, we will run how to run Prisma with a Node.js Project.
+Prisma allows you to connect to your databases and perform any database-related operation. This will enable you to create applications without manually setting up your database. Prisma handles this for you. With just a few lines of code, your data will be published to the database of your choice. In this tutorial, we will learn how to run Prisma with a Node.js Project.
 
 ### Prerequisites
 
@@ -283,5 +283,9 @@ To fetch the products from the database, send a GET request to `http://localhost
 ![Using Prisma ORM with Node.js and PostgreSQL](/prisma-orm-with-nodejs-and-postgresql/get.jpg)
 
 Now you can try out other routes for updating and deleting products.
+
+### Conclusion
+
+Now, with the new found knowledge, learn [Database Migrations with NestJS and TypeORM](https://guruspedia.com/understanding-database-migrations-with-nestjs-and-typeorm/)? TypeORM is an ORM for JavaScript and typescript that simplifies how you interact with a database. It has support for NoSQL and SQL-related databases.
 
 I hope this tutorial was helpful!

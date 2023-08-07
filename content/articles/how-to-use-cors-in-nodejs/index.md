@@ -20,7 +20,7 @@ CORS (Cross-Origin Resource Sharing) is a security feature implemented by web br
 
 Let's say you have a web app accessed from `example.com`. This app requests the server domain `api.example.com` to fetch data. In this case, the browser will block server requests. This happens because the server using the domain `api.example.com` does not explicitly allow `example.com` to access its resources. This will result to CORS errors. To allow the exchange of resources, you need to set up the appropriate headers in the server's response. These headers indicate which cross origins are allowed to access the server's resources.
 
-To deeply understand this concept, in this article, you will go through how to implement CORS in a Node.js server.
+To deeply understand this concept, in this article, you will go through how to implement CORS in a [Node.js server](https://guruspedia.com/how-to-set-up-nodejs-express-server-for-react-app/).
 
 ### Prerequisites
 
@@ -210,6 +210,8 @@ app.use(cors({
 ```
 
 Send the fetch request from the site. You should be able to get the todos regardless of the origin of sending the request.
+
+Now that you have mastered How to use CORS in Node.js With Express and Resolve CORS Error With Examples, why not dive deeper and learn How to use CORS in Real Applications? This [Build a Node.js Express Server for React Apps](https://guruspedia.com/how-to-set-up-nodejs-express-server-for-react-app/) guide Shows you how to add CORS and exchange data between servers. OR if you are a fan of Python, learn the [Complete Guide to Creating Flask APIs with React apps](https://guruspedia.com/a-complete-guide-to-creating-flask-apis-react-apps/) and use Flask CORS to allow Cross Origin Resource sharing.
 
 ### Conclusion
 

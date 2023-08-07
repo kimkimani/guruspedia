@@ -464,6 +464,8 @@ Now you can go ahead and switch the application language and test if i18n is wor
 
 ![How to set up Internationalization in React.js using react-i18next](/how-to-setup-internationalization-in-reactjs-using-react-18next/appt.png)
 
+Do you want to take your React skills to a new height? Learn [How to Build and Implement Infinite Scroll in React Apps](https://guruspedia.com/how-to-build-and-implement-infinite-scroll-in-react-apps/). Get crazier learning this [Complete Guide to Creating Flask APIs with React apps](https://guruspedia.com/a-complete-guide-to-creating-flask-apis-react-apps/). 
+
 ### Conclusion
 
 react-i18next is a popular library for internationalizing React apps. It provides a set of components and functions that make it easy to add support for multiple languages to a React app. This guide has used react-i18next to implement internationalization in React. You can check the code used along this guide on this.

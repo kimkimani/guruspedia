@@ -18,15 +18,15 @@ Containers are lightweight operating systems that run as a form of virtualizatio
 
 Once you have an app ready for production, you push it to a virtual machine on some host system. But to spin up this virtual machine, you need the following machine bare metals.
 
-![](/understanding-the-concept-of-containers-and-containerization/baremetals.png)
+![Understanding the Concept of Containers and Containerization](/understanding-the-concept-of-containers-and-containerization/baremetals.png)
 
 To depoly the application, you need a guest OS to spin up the virtual application. On top of that, you add some binaries and libraries to support your Node.js application.
 
-![](/understanding-the-concept-of-containers-and-containerization/node-virtul.png)
+![Understanding the Concept of Containers and Containerization](/understanding-the-concept-of-containers-and-containerization/node-virtul.png)
 
 Once in production, you need to ensure the scalability of this application. Here we'll create two additional copies of the application.
 
-![](/understanding-the-concept-of-containers-and-containerization/guestvms.png)
+![Understanding the Concept of Containers and Containerization](/understanding-the-concept-of-containers-and-containerization/guestvms.png)
 
 Even though this can be a lightweight application, to create additional VMs, you have to deploy that guest OS, binaries, and libraries for each instance of the application. Here you can assume that you will have consumed all of the resources for this particular hardware.
 
@@ -44,7 +44,7 @@ Containerization provides a standardized, lightweight method to deploy your appl
 
 The following figure depicts how different Node.js instances can run within a containerized environment.
 
-![](/understanding-the-concept-of-containers-and-containerization/container.png)
+![Understanding the Concept of Containers and Containerization](/understanding-the-concept-of-containers-and-containerization/container.png)
 
 With containers, you don’t need a guest OS to run your application. The container shares the host’s kernel to run all the individual apps within the container. Resources are shared within the container, and your application consumes less resources. If these container processes aren't actually utilizing the CPU or memory, those shared resources become accessible to the other containers running within that hardware.
 
@@ -75,6 +75,8 @@ The top 10 Container Management Software include:
 - Google Cloud Platform
 - Portainer
 - Apache Mesos
+
+Now that you have mastered the Concept of Containers and Containerization, why not dive deeper and learn the best strategies to slim Docker images and how to use them to reduce Docker image size in this [How to Minimize Docker Images - Docker Image Optimization Strategies](https://guruspedia.com/how-to-minimize-docker-mages/) guide.
 
 ### Conclusion
 

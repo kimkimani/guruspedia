@@ -20,7 +20,7 @@ Splash screens display the name or logo of the application. Splash screens can a
 
 We will use the following:
 
-- [React Native](https://reactnative.dev/) -  which is an open-source and React-based framework for creating mobile applications. With React Native, you can write code that can be used and run across both iOS and Android platforms. Using the Splash screen example, you eill be able to add the splash screen for both iOS and Android platforms.
+- [React Native](https://reactnative.dev/) - which is an open-source and React-based framework for creating mobile applications. With React Native, you can write code that can be used and run across both iOS and Android platforms. Using the Splash screen example, you eill be able to add the splash screen for both iOS and Android platforms.
 - [Expo](https://docs.expo.dev/) - which is an open-source library that provides tools for quickly getting started with a basic React Native app. Expo provides tools to create apps for Android, iOS, and the web using React without using any native code.
 - You can use tools such as Figma to create a splash screen asset. However, here we will use buildicon to highlight a simple splash screen.
 
@@ -219,7 +219,9 @@ Apart from the general customizations, on IOS, you can add the `tabletImage` set
 }
 ```
 
-### **Conclusion**
+Congratulations on Creatinge React Native Splash Screens Using Expo. Take your Next.js skills to new heights and learn [How to Implement Animations in React Native](https://guruspedia.com/how-to-implement-animations-in-react-native/) like a pro. You will love it.
+
+### Conclusion
 
 You now learned how to creatinge React Native Splash Screens Using Expo. For further understanding of the topic, consider the following references:
 

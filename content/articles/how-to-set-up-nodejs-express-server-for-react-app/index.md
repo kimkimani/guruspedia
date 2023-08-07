@@ -49,6 +49,8 @@ After that, we need to install the following NPM packages using an NPM command (
 - [Express](https://www.npmjs.com/package/express) - To create a Node.js server, we will use Express. Express is a Node.js NPM package for creating opinionated and minimalist HTTP servers
 - [CORS](https://www.npmjs.com/package/cors) - CORS stands for Cross-origin resource sharing. When creating an application that runs on different ports, you need CORS for cross-domain resource sharing.
 
+> Related: [How to use CORS in Node.js With Express With Examples](https://guruspedia.com/how-to-use-cors-in-nodejs/)
+
 To install them, run:
 
 ```bash
@@ -233,5 +235,12 @@ return (
 
 To test this setup, ensure both the Node.js and React apps are running. Then go to `http://localhost:3000`.
 
-
 React will server a UI that has the API data.
+
+### Conclusion
+
+Now that you have mastered How to Build a Node.js Express Server for React Apps, why not dive deeper and learn the [Complete Guide to Creating Flask APIs with React apps](https://guruspedia.com/a-complete-guide-to-creating-flask-apis-react-apps/) and use Flask API Resource sharing with React. 
+
+Or do you want to take your React skills to a new height? Learn [How to Build and Implement Infinite Scroll in React Apps](https://guruspedia.com/how-to-build-and-implement-infinite-scroll-in-react-apps/). Get crazier learning this [Consuming GraphQL API with ReactJS](https://guruspedia.com/consuming-graphqL-api-with-reactjs/) Definitive guide.
+
+You will love it!

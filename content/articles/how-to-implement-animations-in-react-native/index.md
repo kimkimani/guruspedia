@@ -229,7 +229,9 @@ function MyComponent() {
 
 The `LayoutAnimation`.configureNext method configures the animation played when the `isExpanded` state variable changes.
 
-The configureNext method takes an object with the properties duration and update, where duration is the duration of the animation in milliseconds. An update is an object with the properties type and springDamping, where type is the type of animation to use (in this case, spring) and springDamping is the damping of the spring animation. You then use the setIsExpanded function to toggle the `isExpanded` state variable, which triggers the layout animation.
+The `configureNext` method takes an object with the properties duration and update, where duration is the duration of the animation in milliseconds. An update is an object with the properties type and springDamping, where type is the type of animation to use (in this case, spring) and springDamping is the damping of the spring animation. You then use the setIsExpanded function to toggle the `isExpanded` state variable, which triggers the layout animation.
+
+Now that you have mastered How to Implement Animations in React Native, why not dive deeper and take your Next.js skills to new heights and learn [Creatinge React Native Splash Screens Using Expo](https://guruspedia.com/guide-to-creatinge-react-native-splash-screens-using-expo/)? You will love it.
 
 ### Conclusion
 

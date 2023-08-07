@@ -14,7 +14,7 @@ images:
     alt: How to Deploy React Apps to Kubernetes Using Docker
 ---
 
-The concept of containerization helps you run the application as lightweight virtual machines. As a Web Developer, setting up local development environments can be tiresome. Using infrastructures such as Docker and Kubernetes gives a developer an upper hand to quickly set up and deploy applications. This guide uses Docker to deploy a React app to Kubernetes.
+[The concept of Containers and Containerization](https://guruspedia.com/understanding-the-concept-of-containers-and-containerization/) helps you run the application as lightweight virtual machines. As a Web Developer, setting up local development environments can be tiresome. Using infrastructures such as Docker and Kubernetes gives a developer an upper hand to quickly set up and deploy applications. This guide uses Docker to deploy a React app to Kubernetes.
 <!--more-->
 
 ### Essentials
@@ -335,6 +335,8 @@ minikube service react-app
 http://127.0.0.1:2376
 ```
 
-I hope you found this helpful.
+Congratulations on Deploying React Apps to Kubernetes Using Docker. Become an even more proficient React DevOps engineer and deploy apps to the cloud in this [Kubernetes CICD pipeline using GitHub Actions and EKS](https://guruspedia.com/kubernetes-cluster-pipeline-using-github-actions/) guide. You can get more outlandish Confidently Automating Kubernetes to [AWS EKS Cluster Deployment with Terraform](https://guruspedia.com/confidently-automate-aws-eks-cluster-deployments-with-terraform/). Happy containerizing!
 
-To orchestrate microservices means coordinating and managing the deployment, execution, and interaction of independent microservices to achieve specific business objectives. This includes service discovery, load balancing, request routing, inter-service communication, and workflow management. Orchestrating creates an effective functioning of the microservices as a cohesive system.
+### Conclusion
+
+Do you want to take your React skills to a new height? Learn [How to Build and Implement Infinite Scroll in React Apps](https://guruspedia.com/how-to-build-and-implement-infinite-scroll-in-react-apps/). Get crazier learning this [Consuming GraphQL API with ReactJS](https://guruspedia.com/consuming-graphqL-api-with-reactjs/) Definitive guide.

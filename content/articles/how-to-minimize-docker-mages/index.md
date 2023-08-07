@@ -3,7 +3,7 @@ layout: blog
 status: publish
 published: true
 url: /how-to-minimize-docker-mages/
-title: How to Minimize Docker Images - Docker Image Optimization Strategies
+title: How to Minimize and Slim Docker Images - Docker Image Optimization Strategies
 description: This article will teach you the best strategies and tips for slimming down Docker images and reducing their size. So, if you're looking for an easier way to manage your Docker images, this guide is for you!
 date: 2023-07-19T00:00:00-12:00
 topics: [DevOps]
@@ -12,7 +12,7 @@ excerpt_separator: <!--more-->
 images:
 
   - url: /how-to-minimize-docker-mages/hero.png
-    alt: How to Minimize Docker Images- Docker Image Optimization Strategies
+    alt: Minimize and Slim Docker Images - Docker Image Optimization Strategies
 ---
 
 Ensuring you have light Docker images speeds up the build and deployment of your Docker containers. There are approaches you can add while building the docker image to reduce its size without affecting performance. This article will teach you the best strategies and tips for slimming down Docker images and reducing their size. So, if you're looking for an easier way to manage your Docker images, this guide is for you!
@@ -24,12 +24,12 @@ Building and pushing large Docker images to a registry such as [DockerHub](https
 
 ### Prerequisite
 
-To follow along with this guide, ensure:
+To Minimize and Slim Docker Images, ensure:
 
 -  You have Docker and [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running on your computer.
 - You have basic knowledge of working with Docker.
 
-### Best Strategies to minimize Docker Images
+### Best Strategies to minimize and Slim Docker Images
 
 Optimizing and reducing your Docker images to the smallest size significantly reduce the cost and time spent building and pushing images. In this section, we will discuss different strategies to slim down Docker images and reduce size.
 
@@ -107,11 +107,11 @@ node_example   latest    a10aa8869a21   39 seconds ago   338.7MB
 
 Each base image you use provides its distributions. Ensure you always check your base image tags that provide small image builds.
 
-#### Using .dockerignore
+#### Using .dockerignore to Minimize and Slim Docker Images
 
 While creating the above images, the `COPY . .` command copy all the files and folders present in your project directory. In this simple example, the application has the following structure:
 
-![File Structure](/how-to-minimize-docker-mages/dockerignore.png)
+![How to Minimize and Slim Docker Images: File Structure](/how-to-minimize-docker-mages/dockerignore.png)
 
 Looking closely, Docker doesn’t need to copy all these folders and files. For example, the`RUN npm run build` command in the DockerFile will create the application *build* folder, and the `RUN npm install` command will create the *node_modules* folder. Therefore, you don’t need to copy these files while building the Docker image.
 Each folder and file copied add to the size of the image. It is best to avoid unnecessary copy. 
@@ -165,7 +165,7 @@ These new commands add more layers to the Docker image.
 
 On the Docker Desktop in your local machine, navigate to your created image, and you should have a clear view of the image layers as follows:
 
-![An image showing the layers of the Docker image](/how-to-minimize-docker-mages/layers.png)
+![How to Minimize and Slim Docker Images: An image showing the layers of the Docker image](/how-to-minimize-docker-mages/layers.png)
 
 Docker shows that this image has 18 layers. This includes layers used to package the base image. However, you are accountable for ten layers that you can control based on the Dockerfile used to build this image.
 
@@ -230,7 +230,7 @@ In this case, the first stage created the application build. This build will be 
 
 In this case, you have one Dockerfile that builds the application for you and create the final production-ready image under one image. As a result, you reduce the number of layers in your image:
 
-![Docker multistage image layers](/how-to-minimize-docker-mages/multistage.png)
+![How to Minimize and Slim Docker Images: Docker image layers](/how-to-minimize-docker-mages/multistage.png)
 
 And so the total size of your Docker image:
 
@@ -248,7 +248,7 @@ docker build --target builder -t node_example:dev .
 docker build --target final -t node_example:prod .
 ```
 
-#### Using Tools to Reduce Docker Image Size
+#### Using Tools to Reduce and Slim Docker Image Size
 
 A few tools can help you reduce the image size even further. They offer built-in image compression capabilities to create smaller images than the original. They include:
 
@@ -279,7 +279,6 @@ node_example   latest    b066d92ab741   1 minutes ago   162MB
 ```
 
 You can check out how to use [DockerSlim](https://earthly.dev/blog/docker-slim/) to further reduce the current image size (162) to approximately 91.5%.
-
 
 Now, with the new found knowledge, why not [Automate and Deploy Kubernetes CICD pipeline using GitHub Actions and EKS](https://guruspedia.com/kubernetes-cluster-pipeline-using-github-actions/) or dive into learning all about [Terraform functions](https://guruspedia.com/guide-to-terraform-functions/), with examples and best practices to boost your Infrastructure Workflow like a pro.
 

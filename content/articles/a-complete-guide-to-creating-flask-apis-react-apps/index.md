@@ -1316,6 +1316,8 @@ Access the application on `http://localhost:3000/`. Your pages should be display
 
 ![A Complete Guide to Creating Flask APIs with React apps](/a-complete-guide-to-creating-flask-apis-react-apps/update_movie_page.png)
 
+Now that you have mastered Creating Flask APIs with React apps, why not dive deeper and take your React skills to a new height? Learn [How to Build and Implement Infinite Scroll in React Apps](https://guruspedia.com/how-to-build-and-implement-infinite-scroll-in-react-apps/). Get crazier learning this [Consuming GraphQL API with ReactJS](https://guruspedia.com/consuming-graphqL-api-with-reactjs/) Definitive guide.
+
 ### Conclusion
 
 This post shows you a high-level overview of integrating a Flask API with a React app. You have created a Flask server that exposes an API and a React app that send requests to the API using Axios. This communication allows you to build dynamic and interactive web applications.

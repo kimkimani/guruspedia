@@ -92,7 +92,7 @@ Check this [guide](http://woshub.com/too-many-open-files-error-linux/#:~:text=It
 
 [Event loop](https://nodejs.org/ru/docs/guides/event-loop-timers-and-nexttick/) is a Node.js mechanism that handles events efficiently in a continuous loop. Even loop allows Node.js to perform [non-blocking I/O operations](https://nodejs.org/en/docs/guides/blocking-vs-non-blocking/). The following figure offers a simplified overview of the Node.js event loop based on the order of execution. Each process is referred to as a phase of the event loop.
 
-![](/the-strategies-to-scale-nodejs/loop.png)
+![The Best Strategies to scale Node.js Apps](/the-strategies-to-scale-nodejs/loop.png)
 
 Node.js uses the term event loop utilization to indicate the ratio between the amount of time the event loop is active in the event provider and the overall duration of its execution.
 

@@ -52,7 +52,7 @@ This pipeline uses version control systems like GitHub to implement continuous d
 
 When you make changes to your repository, the reproducible steps defined in your GitHub Actions workflows are triggered, initiating redeployments through your established pipeline. This ensures that any modifications to your codebase are automatically deployed, following the defined workflow, without manual intervention.
 
-![GitHub Action workflow for Kubernetes](/kubernetes-cluster-pipeline-using-github-actions/cicd.png)
+![GitHub Actions and EKS: GitHub Action workflow for Kubernetes](/kubernetes-cluster-pipeline-using-github-actions/cicd.png)
 
 ### Setting up Kubernetes Cluster
 
@@ -171,7 +171,7 @@ Check this [guide and create your key](https://docs.docker.com/docker-hub/access
 
 Once you have them ready, the following image summarizes the complete steps and results for your environment variables configuration:
 
-![Setting up GitHub actions environment variables](/kubernetes-cluster-pipeline-using-github-actions/variables.png)
+![GitHub Actions and EKS: Setting up GitHub actions environment variables](/kubernetes-cluster-pipeline-using-github-actions/variables.png)
 
 #### Laying Down the Workflow
 
@@ -260,7 +260,7 @@ Create a working AWS EKS cluster using your AWS IAM account. You can create the 
 
 While creating the EKS cluster, ensure it has a running [Worker/Group node](https://docs.aws.amazon.com/eks/latest/userguide/create-managed-node-group.html) for running pods or create one [manually](https://ostechnix.com/add-worker-nodes-to-amazon-eks-cluster/). Worker nodes are responsible for running the application containers within the Kubernetes cluster. Without them, no resources will be available to run your cluster [Pods](https://kubernetes.io/docs/concepts/workloads/pods/).
 
-![Setting Up EKS worker nodes](/kubernetes-cluster-pipeline-using-github-actions/eks.png)
+![GitHub Actions and EKS: Setting Up EKS worker nodes](/kubernetes-cluster-pipeline-using-github-actions/eks.png)
 
 #### Setting up Kubectl
 
@@ -294,7 +294,7 @@ By default, the context configuration information lives in `$HOME/.kube/config` 
 aws eks --region us-west-1 update-kubeconfig --name eks_k8s
 ```
 
-![Setting up EKS context](/kubernetes-cluster-pipeline-using-github-actions/context.png)
+![GitHub Actions and EKS: Setting up EKS context](/kubernetes-cluster-pipeline-using-github-actions/context.png)
 
 In the context, `us-west-1` should be your AWS cluster region code, and `eks_k8s` should be the name of your EKS cluster.
 
@@ -380,7 +380,7 @@ Finally, you can run your `kubectl`, just as you would typically do on your loca
 
 Once you update your `.github/workflows/deploy.yml` file with above steps ([Check a sample here](https://github.com/Rose-stack/GitHub-Actions-K8s/blob/main/.github/workflows/deploy.yml)), your workflow will be tirgged as follows:
 
-![Workflow triggered](/kubernetes-cluster-pipeline-using-github-actions/one.png)
+![GitHub Actions and EKS: Workflow triggered](/kubernetes-cluster-pipeline-using-github-actions/one.png)
 
 Accessing your action will display the jobs your are executing:
 

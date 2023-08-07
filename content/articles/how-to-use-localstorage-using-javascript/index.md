@@ -377,6 +377,8 @@ From your webpage, once you **Delete Note**, the note you choose will be deleted
 
 ![How to use Local Storage using JavaScript](/how-to-use-localstorage-using-javascript/delete.png)
 
+Now that you have mastered How to use LocalStorage using JavaScript consider diving deeper and learn using JavaScript states for LocalStorage in this [Comprehensive Guide to Vue.js State Management using Pinia](https://guruspedia.com/vuejs-state-management-using-pinia/). You will love it! 
+
 ### Conclusion
 
 Local storage should not be used to store sensitive data. This data is stored locally on the browser and not sent to the server. Thus, the data cannot be used to synchronize data on server storage.

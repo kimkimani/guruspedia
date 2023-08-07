@@ -521,6 +521,8 @@ Using Pina, you can reset the state data to its initial value. This can be done 
 
 Clicking the Reset Store button will reset the store to its initial value. This should also reset the states persisted by the local storage.
 
+Now that you have mastered Vue.js State Management using Pinia consider diving deeper and learn JavaScript states for LocalStorage in this [How to use Local Storage using JavaScript](https://guruspedia.com/how-to-use-localstorage-using-javascript/) Definitive Guide.
+
 ### Conclusion
 
 If you are looking for a simple, intuitive solution that is easy to learn and use, consider using Pinia for state management in your Vue.js application. I hope this guide has helped you understand Pinia in detail and what you can achieve with it. You can check the code used along this guide on this [GitHub repository](https://github.com/kimkimani/Vue.js-Pinia-Todo-App).

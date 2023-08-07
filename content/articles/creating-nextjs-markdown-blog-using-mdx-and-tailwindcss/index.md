@@ -453,7 +453,7 @@ export default function Post(props) {
 }
 ```
 
-When you click on a single post, you should be able to access its content as such.
+When you click on a single post, you should be able to access its content as such. Congratulations on Creating a Next.js Markdown Blog using MDX and TailwindCSS. Take your Next.js skills to new heights and learn [How to Test Next.js Applications with Jest](https://guruspedia.com/how-test-nextjs-apps-with-jest/) like a pro. You will love it.
 
 ### Deploying to Vercel
 

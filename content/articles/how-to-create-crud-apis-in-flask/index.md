@@ -261,6 +261,8 @@ From your Postman, send a `DELETE` request to: `http://127.0.0.1:5000/posts?id=i
 
 Note: In the `http://127.0.0.1:5000/posts?id=id_of_post_to_be_deleted` endpoint, you will need to replace the parameter `id_of_post_to_be_deleted` with the id of the specific post you want to delete.
 
+Now, you have mastered Creating CRUD APIs in Flask, why not dive deeper into Python and learn how to [Build Django RESTful CRUD APIs using the Django REST framework](https://guruspedia.com/how-to-create-django-crud-apis/)? Or get wilder learning this [Complete Guide to Creating Flask APIs with React apps](https://guruspedia.com/a-complete-guide-to-creating-flask-apis-react-apps/) and take your skills to new heights.
+
 ### Conclusion
 
 This guide has helped create a CRUD API using Flask. I hope you find it useful as well as insightful.
