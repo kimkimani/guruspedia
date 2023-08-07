@@ -27,6 +27,9 @@ To proceed in this article, it is helpful to have the following:
 - An [IAM AWS user account](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html) with sufficient permissions to create and manage EKS resources. For easier understanding, you can give your IAM user administrator permissions in this case.
 - The [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) and [eksctl](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html) installed and configured on your local computer.
 - [Terraform](https://developer.hashicorp.com/terraform/downloads) installed on your machine.
+
+> [RELATED: Guide to Terraform Functions for Infrastructure Automation - With Examples and Best Practices](https://guruspedia.com/guide-to-terraform-functions/)
+
 - A basic understanding of how to use [Kubernetes](https://kubernetes.io/docs/concepts/overview/components/) and its components with [Kubectl](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html) installed.
 - [Docker](https://www.docker.com/) installed on your computer.
 - A demo application ready with a working Dockerfile for packaging and creating the application Docker image.
@@ -473,6 +476,8 @@ terraform destroy
 ```
 
 ![Confidently Automate AWS EKS Cluster Deployments with Terraform: Terraform Destroy Command](/confidently-automate-aws-eks-cluster-deployments-with-terraform/destroy-command.png)
+
+Now, with the new found knowledge, why not [Automate and Deploy Kubernetes CICD pipeline using GitHub Actions and EKS](https://guruspedia.com/kubernetes-cluster-pipeline-using-github-actions/) or dive into learning all about [Terraform functions, with examples and best practices to boost your Infrastructure Workflow](https://guruspedia.com/guide-to-terraform-functions/) like a pro.
 
 ### Conclusion
 
