@@ -214,11 +214,11 @@ public class NotificationView extends AppCompatActivity {
 
 **Output:**
 
-![How to Create Android Notifications Like a PRO](/how-to-create-android-notifications/image2.jpg)
+![How to Create Android Notifications Like a PRO](/how-to-create-android-notifications/image2.png)
 
-![How to Create Android Notifications Like a PRO](/how-to-create-android-notifications/image4.jpg)
+![How to Create Android Notifications Like a PRO](/how-to-create-android-notifications/image4.png)
 
-![How to Create Android Notifications Like a PRO](/how-to-create-android-notifications/image3.jpg)
+![How to Create Android Notifications Like a PRO](/how-to-create-android-notifications/image3.png)
 
 #### Conclusion
 
