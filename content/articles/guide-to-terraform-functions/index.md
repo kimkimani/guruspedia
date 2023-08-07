@@ -506,3 +506,6 @@ Terraform functions are an excellent tool for simplifying infrastructure automat
 This guide covered just a few of the functions Terraform provides. If you want to streamline infrastructure automation workflows, start [utilizing Terraform functions in infrastructure deployments](https://developer.hashicorp.com/terraform/language/functions/) today.
 
 To learn more about the available built-in functions, check out [HashiCorp's website](https://developer.hashicorp.com/terraform/language/functions/).
+
+
+Now, with the new found knowledge, why not [Confidently Automate AWS Kubernetes to EKS Cluster Deployment with Terraform](https://guruspedia.com/kubernetes-cluster-pipeline-using-github-actions/) or dive into learning all about [Minimizing Docker Images and Docker Image Optimization Strategies](https://guruspedia.com/how-to-minimize-docker-mages/) like a pro.
