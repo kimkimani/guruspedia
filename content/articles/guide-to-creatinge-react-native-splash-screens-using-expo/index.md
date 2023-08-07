@@ -219,7 +219,7 @@ Apart from the general customizations, on IOS, you can add the `tabletImage` set
 }
 ```
 
-Congratulations on Creatinge React Native Splash Screens Using Expo. Take your Next.js skills to new heights and learn [How to Implement Animations in React Native](https://guruspedia.com/how-to-implement-animations-in-react-native/) like a pro. You will love it.
+Congratulations on Creatinge React Native Splash Screens Using Expo. Take your React Native skills to new heights and learn [How to Implement Animations in React Native](https://guruspedia.com/how-to-implement-animations-in-react-native/) like a pro. You will love it.
 
 ### Conclusion
 
