@@ -402,6 +402,8 @@ Or you can inspect your deployed workload on your AES EKS cluster page:
 
 ![EKS cluster workload](/kubernetes-cluster-pipeline-using-github-actions/eks-running.png)
 
+Now, with the new found knowledge, why not [Confidently Automate AWS Kubernetes to EKS Cluster Deployment with Terraform](https://guruspedia.com/kubernetes-cluster-pipeline-using-github-actions/) or dive into learning all about [Terraform functions, with examples and best practices to boost your Infrastructure Workflow](https://guruspedia.com/guide-to-terraform-functions/) like a pro.
+
 ### Conclusion
 
 CI/CD pipeline deployments create an efficient workflow to automate the deployment processes. DevOps engineers can build, test, and deploy applications to a platform like Kubernetes using CI/CD tools such as GitHub Actions. In this guide, you have learned processes for setting up a Kubernetes cluster using GitHub Actions. You have used a GitHub Actions workflow to create different events and triggers for deploying containers to the Kubernetes cluster hosted on EKS. I hope you found this tutorial helpful.
