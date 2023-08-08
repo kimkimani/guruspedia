@@ -139,28 +139,28 @@
   &-18-regular {
     @include font-smoothing;
     @include gt-regular;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 26px;
   }
 
   &-18-medium {
     @include font-smoothing;
     @include gt-medium;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 26px;
   }
 
   &-19-regular {
     @include font-smoothing;
     @include gt-regular;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 28px;
   }
 
   &-20-regular {
     @include font-smoothing;
     @include gt-regular;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 30px;
   }
 
