@@ -20,17 +20,17 @@ pygmentsStyle = "monokai"
    topics = "/topic/:slug/"
 [author]
   name = "Guru Spedia"
-  email = "guruspedia"
+  email = "guruspedia@gmail.com"
 [params]
   dateformat = "January 2, 2006"
   description = "The latest in technology, computing and engineering."
 [markup.goldmark.renderer]
   unsafe = true
 [social]
-email = "guruspedia"
-slack = "https://t.co/"
-twitter = "https://twitter.com/"
-github = "https://github.com/"
+email = "guruspedia@gmail.com"
+linkedin = "https://www.linkedin.com/in/gurus-pedia-83b777287/"
+twitter = "https://twitter/GurusPedia"
+github = "https://github.com/kimkimani/"
 [blackfriday]
   plainIDAnchors = true
 [related]
