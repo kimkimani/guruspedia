@@ -19,7 +19,7 @@
     position: relative;
 
     p a {
-      //@include link-effect;
+      @include link-effect;
     }
 
     &-title {
@@ -36,7 +36,7 @@
     color: #1d9ad1;
 
     a {
-      //@include link-effect;
+      @include link-effect;
     }
 
     &-title {
@@ -104,9 +104,9 @@
     > p:first-of-type { 
       @extend .text-20-regular;
 
-      a {
-        @extend .title-5;
-      }
+      // a {
+      //   @extend .title-5;
+      // }
     }
   }
 
@@ -194,13 +194,13 @@ ol {
 }
 li ul, li ol {
     padding-left: 1em;
-    
 }
 
 
 li > p {
     margin: 0;
     text-decoration: none;
+    
 }
 
 code {
@@ -224,8 +224,7 @@ pre > code{
   background-color: #0f0f20 !important;
   border-radius: 5px;
   color: #030b14;
- 
-  
+
   //border-bottom-left-radius:5px ;
 }
 
@@ -236,8 +235,9 @@ hr {
   clear: both;
 }
 a {
-  color: #538bcc;
+  color: #1d9ad1;
   text-decoration: none;
+  @include link-effect;
 }
 table {
   color: #141823;
