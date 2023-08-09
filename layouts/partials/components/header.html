@@ -28,6 +28,14 @@
     </div>
     {{ if not (eq .Layout "lp-slim") }}
     <div class="section-nav-secondary flex align-center">
+      <ul class="section-nav-main list-flex">
+        <div class="search-container">
+          <input type="text" id="search-input" class="text-24 bold" placeholder="Search docs...">
+        </div>
+        <div class="search-button">
+          <a href="/about"><button id="search-button" class="text-24 bold decoration-none"> Contribute</button></a>
+        </div>
+      </ul>
     </div>
     {{ end }}
     <div class="section-nav-triggers">
