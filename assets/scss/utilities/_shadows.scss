@@ -20,8 +20,8 @@
   transition: box-shadow 240ms $t-1;
 
   &:hover {
-    //box-shadow: 0 pxem(14) pxem(19) 0 rgba(0, 0, 0, 0.2);
-    //cursor: pointer;
+    box-shadow: 0 pxem(14) pxem(19) 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
 
   &:active {

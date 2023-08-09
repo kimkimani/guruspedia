@@ -21,13 +21,13 @@ body {
 }
 
 .section-nav {
-  background-color: #def4be;
+  background-color: #FFF;
   z-index: 300;
   position: fixed;
   width: 100%;
-  //border-bottom: 1px solid #EEEEEE;
+  border-bottom: 0.1rem solid #4CAF50;
   //padding: 12px 0;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 5px 0px #fff;
 
   @media (max-width: 1200px) {
     //padding: 1px;
@@ -123,7 +123,7 @@ body {
       box-shadow: 0 pxem(14) pxem(19) 0 rgba(0, 0, 0, 0.2);
 
       li a:hover {
-        text-decoration: underline;
+        //text-decoration: underline;
       }
     }
 
@@ -148,19 +148,21 @@ body {
       border-bottom: pxem(3) solid transparent;
       padding: 26px 0 26px;
 
-      &:hover {
-        background: rgb(235, 242, 226);
-        border-bottom-color: rgb(25, 23, 23);
+      &:hover a{
+        background-color: #1d9ad1;
+        margin-top: 2px;
+        color:#EEE;
+        border-radius:5px;
       }
 
       &:active {
-        color: rgb(235, 242, 226);
-        border-bottom-color: rgb(25, 23, 23);
+        color:#EEE;
+        //border-bottom-color: #1d9ad1;
       }
 
       &.active {
-        border-bottom-color: rgb(25, 23, 23);
-        color: rgb(235, 242, 226);
+        //border-bottom-color: #1d9ad1;
+        color:#EEE;
       }
 
       > a {
@@ -204,7 +206,7 @@ body {
     opacity: 0;
     position: absolute;
     top: 0;
-    background-color: #def4be;
+    background-color: #fff;
     z-index: 9999;
     transition: opacity 240ms $t-1;
 
@@ -280,7 +282,7 @@ body {
       }
 
       a:hover {
-        text-decoration: underline;
+        //text-decoration: underline;
       }
     }
 
@@ -308,7 +310,7 @@ body {
         width: 100%;
 
         &:hover span {
-          border-bottom: 2px solid $fill-black;
+          border-bottom: 1px solid #1d9ad1;
         }
       }
 
@@ -404,7 +406,7 @@ body {
     }
 
     a:hover {
-      text-decoration: underline;
+      //text-decoration: underline;
     }
   }
 
