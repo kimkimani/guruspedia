@@ -38,11 +38,12 @@ body {
   }
 
   &-inner {
-    padding-left: 5%;
-    padding-right: 5%;
+    margin-left: 100px;
+    padding-left: 6%;
+    padding-right: 6%;
     min-height: 80px;
     transition: min-height 240ms $t-1;
-    margin: 0 auto;
+    //margin: 0 auto;
     max-width: 1600px;
 
     &.-collapse {
