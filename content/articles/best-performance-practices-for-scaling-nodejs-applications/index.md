@@ -8,6 +8,7 @@ description: This guide covers the best practices and solutions in hand for scal
 date: 2023-07-20T00:00:00-01:00
 topics: [Performace]
 pick: [top]
+author: joseph-chege
 excerpt_separator: <!--more-->
 images:
 

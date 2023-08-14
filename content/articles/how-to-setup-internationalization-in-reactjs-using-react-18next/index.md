@@ -8,6 +8,7 @@ description: In this guide, you will learn how to use react-i18next to implement
 date: 2023-07-20T00:00:00-13:00
 topics: [Web, Coding]
 pick: [top]
+author: joseph-chege
 excerpt_separator: <!--more-->
 images:
 

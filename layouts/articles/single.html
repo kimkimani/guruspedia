@@ -1,5 +1,5 @@
 {{ define "main" }}
-
+{{ $author_page := (printf "/authors/%s/index.md" .Params.author) }}
 <article>
   <section class="hero-blocks xs-pt-10 xs-pb-20 sm-pt-40 sm-pb-30 -blue-blocks">
     <div class="section-container relative">
@@ -16,9 +16,9 @@
   </section>
 
   <section class="section-rich-text blog-styling xs-pb-10">
-    <div class="">
-      <div class="section-rich-text-inner prl-5">
-        <div class="section-rich-text-leading">{{ .Content }}</div>
+    <div class="blog-styling">
+      <div class="section-rich-text-inner prl-5 blog-styling">
+        <div class="section-rich-text-leading blog-styling">{{ .Content }}</div>
 
         {{ if hugo.Environment | eq "development" }}
 
@@ -33,8 +33,63 @@
         </script>
 
         {{ end }}
+        <div>
+
+          {{ with .Params.topics }}
+          <div class="topics-decoration">
+            <div class="tag-icon">
+              <svg class="tags__badge" width="16" height="16" viewBox="0 0 32 32">
+                <path
+                  d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z">
+                </path>
+              </svg>
+  
+            </div>
+            {{ range . }}
+            {{- $topicURLparts := slice "topic" (urlize .) -}}
+            {{- $topicURL := delimit $topicURLparts "/"| printf "/%s/" -}}
+            <div class="tag-links">
+              <a class="tag-text-link" href="{{ $topicURL }}">{{
+                . }}</a>
+            </div>
+            {{ end }}
+          </div>
+  
+          {{ end }}
+        </div>
+
+        
+        <div class="author-card">
+          
+          {{ with $.Site.GetPage $author_page }}
+          <div class="image-circular">
+    
+            <div class="card-image">
+              {{ range .Resources }}
+              <img src="{{ (.Resize " 180x").Permalink }}" class="img-responsive img-50 img-round" alt="" />
+            </div>
+            {{ end }}
+          </div>
+          <div class="card-body">
+            <div class="card-body-titles">
+              <p class="p-0 m-0"><small class="text-muted">Written By:</small></p>
+              <h3 class=""><a class="" href="{{ .Permalink }}">{{ .Params.title }}</a></h3>
+            </div>
+            <div class="author-descpt">
+              <p>
+                {{.Content}}
+              </p>
+            </div>
+          </div>
+          {{end}}
+        </div>
+
       </div>
+
     </div>
+
+
+
   </section>
 
 

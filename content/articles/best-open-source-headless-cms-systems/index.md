@@ -7,6 +7,7 @@ title: The Best Open-Source Free CMS Systems In 2023
 description: Dive into this guide and learn the best open-source CMS systems in 2023 to add in you bucket list.
 date: 2023-08-08T15:32:54-04:00
 topics: [Open Source]
+author: joseph-chege
 excerpt_separator: <!--more-->
 images:
   - url: /best-open-source-headless-cms-systems/hero.jpg

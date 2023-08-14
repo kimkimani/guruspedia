@@ -5,6 +5,7 @@ published: true
 url: /how-to-use-localstorage-using-javascript/
 title: A Definitive Guide - How to use Local Storage using JavaScript
 description: This article will help you will understand how to use local storage in JavaScript by building a simple notes application.
+author: joseph-chege
 date: 2023-07-19T00:00:00-12:00
 topics: [Coding]
 pick: [top]
