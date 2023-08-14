@@ -34,7 +34,7 @@
           {{ if hugo.Environment | eq "development" }}
           <li class="xs-pr-20"><a href="/" class="{{ if isset $currentPage.Data "Term" }}text-18-regular{{ else }}text-18-medium{{ end }} text-light-blue decoration-none" \>All</a> </li>
           {{ else }}
-          <li class="xs-pr-20"><a href="/engineering-education/" class="{{ if isset $currentPage.Data "Term" }}text-18-regular{{ else }}text-18-medium{{ end }} text-light-blue decoration-none" \>All</a> </li>
+          <li class="xs-pr-20"><a href="/" class="{{ if isset $currentPage.Data "Term" }}text-18-regular{{ else }}text-18-medium{{ end }} text-light-blue decoration-none" \>All</a> </li>
           {{ end }}
           
           {{ $baseurl := .Site.BaseURL }}
