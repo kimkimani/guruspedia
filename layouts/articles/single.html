@@ -19,9 +19,7 @@
     <div class="blog-styling">
       <div class="section-rich-text-inner prl-5 blog-styling">
         <div class="section-rich-text-leading blog-styling">{{ .Content }}</div>
-
         {{ if hugo.Environment | eq "development" }}
-
         <script type="text/javascript">
           var images = document.getElementsByTagName("img");
           for (var i = 0; i < images.length; i++) {
