@@ -11,23 +11,6 @@
           {{ end }}
           <img class="heroimage relative prl-5 sm-pt-20" src="{{ if eq $.Site.Params.env "local" }}{{ replace (index .Params.images 0).url "guruspedia/" "" }}{{ else }}{{ (index .Params.images 0).url }}{{ end }}" alt="{{ (index .Params.images 0).alt }}" />
         </div>
-        {{ with .Params.topics }}
-        <ul class="list-flex xs-mt-8 topics">
-          <li class="xs-mr-6 text-18-regular">Topics:</li>
-          {{ range . }} 
-          {{- $topicURLparts := slice "topic" (urlize .) -}} 
-          {{- $topicURL := delimit $topicURLparts "/"| printf "/%s/" -}}
-          <li class="xs-mr-6 topic">
-            <a
-              class="text-18-regular text-light-blue decoration-none"
-              href="{{ $topicURL }}"
-              >{{ . }}</a
-            >
-          </li>
-          {{ end }}
-        </ul>
-
-        {{ end }}
       </div>
     </div>
   </section>
