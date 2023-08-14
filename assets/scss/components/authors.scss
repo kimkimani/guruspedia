@@ -2,22 +2,22 @@
   display: flex;
   align-items: flex-start;
   border: 1px solid lightgray;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 30px;
   margin-bottom: 20px;
-  margin-top: 70px;
-  background-color: #f0f0f0;
+  //margin-top: 40px;
+  background-color: #fff;
 
   .author-bio-image {
     flex: 0 0 auto;
-    margin-right: 20px;
+    margin-right: 50px;
+    margin-left: 20px;
 
     .bio-image-wrapper {
-      width: 100px;
-      height: 100px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       overflow: hidden;
-      border: 3px solid #1d9ad1;
+      border: 2px solid #1d9ad1;
 
       .bio-image-image {
         width: 100%;
@@ -45,9 +45,9 @@
 
     .header-description {
       margin-top: 10px;
-
+      margin-left: -20px;
+      margin-right: 40px;
       margin-top: 40px;
-
 
       p {
         margin: 0;
@@ -61,6 +61,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-left: 20px;
     //margin-top: 50px;
 
     h6 {
@@ -69,10 +70,11 @@
 
     .author__related__list {
       list-style: none;
-      padding: 0;
+      padding: 10px;
+      margin-right: 80px;
 
       li {
-        margin: 1px 0;
+        margin: 5px 0;
 
         a {
           text-decoration: none;
@@ -88,10 +90,9 @@
   }
 }
 
-
 // Single author for article
 .author-card {
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   margin-left: -60px;
   margin-right: -60px;
   padding: 20px;
@@ -128,11 +129,9 @@
       .text-muted {
         color: #999;
         font-size: 20px;
-
       }
 
       h3 {
-
         margin-top: -20px;
       }
     }
@@ -153,12 +152,10 @@
 }
 
 .tag-links {
-
   text-transform: uppercase;
   margin-top: 30px;
 
   a {
-
     color: white;
     // border: 1.5px solid #4CAF50;
 
@@ -169,7 +166,7 @@
   }
 
   :hover {
-    background: #4CAF50;
+    background: #4caf50;
   }
 }
 
@@ -186,4 +183,67 @@
 
 .valid-tags {
   display: none;
+}
+
+.section-rich-texts {
+  @extend .text-20-regular;
+
+  h3 {
+    @extend .title-3;
+  }
+
+  h4 {
+    @extend .title-4;
+  }
+
+  ul {
+    list-style: none;
+    margin-top: pxem(20);
+    margin-bottom: pxem(20);
+
+    li {
+      @include gt-regular;
+      color: #4caf50;
+      font-size: 18px;
+      margin-bottom: pxem(20);
+      position: relative;
+      padding-left: pxem(20);
+
+      &:before {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='7px' height='7px' viewBox='0 0 7 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3EOval%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Blocks' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Spread-Block-1/2' transform='translate(-752.000000, -366.000000)' fill='%2300A86B' fill-rule='nonzero'%3E%3Ccircle id='Oval' cx='755.5' cy='369.5' r='3.5'%3E%3C/circle%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        background-position: center center;
+        background-repeat: no-repeat;
+        content: "";
+        height: pxem(7);
+        width: pxem(7);
+        margin-right: 12px;
+        padding-right: 0;
+        left: 0;
+        position: absolute;
+        top: 10px;
+      }
+
+      a {
+        @include link-effect;
+      }
+    }
+  }
+
+  &.blog-styling {
+
+    p,
+    ul li,
+    ol li {
+      @extend .text-20-regular;
+    }
+  }
+}
+
+.author-bio-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  width: 87%;
+  align-items: center;
 }

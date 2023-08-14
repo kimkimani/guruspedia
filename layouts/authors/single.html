@@ -1,127 +1,107 @@
-{{ define "main" }}
-{{ $author := path.Base .Permalink}}
-<article>
-  <section class="section-rich-text blog-styling xs-pb-30">
-    <div class="section-container prl-5">
+{{ define "main" }} {{ $author := path.Base .Permalink}}
 
-          {{/*  Insights Section  */}}
-          {{ $allArticles := (where (where .Site.Pages "Params.layout" "blog") ".Params.author" $author) }}
-          {{ $numberOfArticles := len $allArticles }}
+<section class="listing-posts">
+  <div class="resource-block-inner flex flex-wrap justify-center">
+    <section class="section-rich-texts blog-styling xs-pb-30">
+      <div class="author-bio-container prl-5">
+        {{/* Insights Section */}} {{ $allArticles := (where (where .Site.Pages
+        "Params.layout" "blog") ".Params.author" $author) }} {{
+        $numberOfArticles := len $allArticles }} {{/* Need to capture all
+        article urls then asynchronousel fetch the data due to Googles Data API
+        limits.*/}} {{ $articleUrlsList := slice }} {{ range $allArticles }} {{
+        $articleUrlsList = $articleUrlsList | append .Permalink }} {{ end }} {{
+        $articleUrlsList = delimit $articleUrlsList ", "}}
 
-          {{/*  Need to capture all article urls then asynchronousel fetch the data due to Googles Data API limits.*/}}
-          {{ $articleUrlsList := slice }}
-
-          {{ range $allArticles }}
-            {{ $articleUrlsList = $articleUrlsList | append .Permalink }}
-          {{ end }}
-
-          {{ $articleUrlsList = delimit $articleUrlsList ", "}}
-    
-      <div class="author-container">
-        <div class="author-bio-image">
+        <div class="author-container">
+          <div class="author-bio-image">
             <div class="bio-image-wrapper">
-              {{ range .Resources }}
-                <img class="bio-image-image" src="{{ (.Resize "400x").Permalink }}" alt="{{ $.Params.title }}"
-                    loading="eager" decoding="async" fetchpriority="high" width="100" height="100" alt="Hannah Milan">
+              {{ range .Resources }} <img class="bio-image-image" src="{{
+              (.Resize " 400x").Permalink }}" alt="{{ $.Params.title }}" loading="eager" decoding="async"
+                fetchpriority="high" width="100" height="100" alt="Hannah Milan">
             </div>
             {{end}}
-        </div>
-        <div class="author-details">
+          </div>
+          <div class="author-details">
             <div class="author">
-                
               <h3 class="author-title">{{ .Title }}</h3>
             </div>
             <div class="header-description">
-                <p class="blog-styling">
-                  {{ .Content }}
-                </p>
+              <p class="blog-styling">{{ .Content }}</p>
             </div>
-        </div>
-        <div class="author-related">
-            
+          </div>
+          <div class="author-related">
             <ul class="author__related__list">
-            
-                {{ with .Params.twitter }}
-                <li>
-                  <i class="twitter"></i>
-                  <a href="{{ . }}" target="_blank">Twiter @{{ index (last 1 (split . "/")) 0 }}</a>
-                </li>
-                {{ end }}
-                {{ with .Params.linkedin }}
-                <li>
-                  <i class="linkedin"></i>
-                  <a href="{{ . }}" target="_blank">LinkedIn</a>
-                </li>
-                {{ end }}
-                {{ with .Params.github }}
-                <li>
-                  <i class="github"></i>
-                  <a href="{{ . }}" target="_blank">Follow @{{ index (last 1 (split . "/")) 0 }} on GitHub</a>
-                </li>
-                {{ end }}
-                {{ with .Params.website }}
-                <li>
-                  <i class="website"></i>
-                  <a href="{{ . }}" target="_blank">Potfolio</a>
-                </li>
-                {{ end }}
-              </ul>
-        </div>
-    </div>
-    
-    
-    
-    </div>
-  </section>
-</article>
-
-<section class="blog-listing-posts">
-  <div class="section-container blog-listing-posts-container">
-    <div class="blog-listing-posts-content">
-      <h2 class="title-3 text-blue xs-pb-20">{{ $numberOfArticles }} Stories by {{ .Title }}</h2>
-      <ul class="list-unstyled xs-mb-80">
-    
-        {{ range $elem_index, $elem_val := (where (where .Site.Pages "Params.layout" "blog") ".Params.author" $author) }}
-        
-        {{ $articlePermalink := "" }}
-        {{ if eq $.Site.Params.env "local" }}
-          {{ $articlePermalink = .Permalink }}
-        {{ else if eq $.Site.Params.env "staging" }}
-          {{ $articlePermalink = replace .Permalink "beta" "www" }}
-        {{ else }}
-          {{ $articlePermalink = .Permalink }}
-        {{ end }}
-
-        {{ $articleSlug := replaceRE "(https://www.section.io/)|(http://localhost:1313/)|(https://beta.section.io/)" "" $articlePermalink }}
-
-        <li class="blog-listing-posts-item mix {{ with .Params.tags }}{{ range . }}{{ lower . }} {{ end }}{{ end }}" data-id="{{ $articlePermalink }}">
-          <a class="decoration-none xs-pb-40 xs-pt-40 pl-25 flex flex-wrap" href="{{.Permalink}}">
-
-            <div class="blog-listing-posts-item-image">
-              {{ if isset .Params "images" }}
-                {{ if (gt (len .Params.images) 0) }}
-                  {{ if (index .Params.images 0).url }}
-                  {{ if hugo.Environment | eq "development" }}
-                    <img src="{{ replace (index .Params.images 0).url "/engineering-education/" "/" }}" {{ if (index .Params.images 0).alt}} alt="{{ (index .Params.images 0).alt }}"{{ end }}>
-                    {{ else }}
-                    <img src="{{ (index .Params.images 0).url }}" {{ if (index .Params.images 0).alt}} alt="{{ (index .Params.images 0).alt }}"{{ end }}>
-                  {{ end }}
-                  {{ end }}
-                {{ end }}
+              {{ with .Params.twitter }}
+              <li>
+                <i class="twitter"></i>
+                <a href="{{ . }}" target="_blank">Twiter</a>
+              </li>
+              {{ end }} {{ with .Params.linkedin }}
+              <li>
+                <i class="linkedin"></i>
+                <a href="{{ . }}" target="_blank">LinkedIn</a>
+              </li>
+              {{ end }} {{ with .Params.github }}
+              <li>
+                <i class="github"></i>
+                <a href="{{ . }}" target="_blank">GitHub</a>
+              </li>
+              {{ end }} {{ with .Params.website }}
+              <li>
+                <i class="website"></i>
+                <a href="{{ . }}" target="_blank">Website</a>
+              </li>
               {{ end }}
-            </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="blog-listing-posts-item-content">
-              <h3 class="title-3 text-link xs-mb-10">{{.Title}}</h3>
-              <p class="text-blockquote xs-mb-20">{{ .Date.Format "Jan 2, 2006" }}</p>
-              <p class="text-18-regular text-color">{{ .Summary | plainify | truncate 210 "..." }}</p>
-            </div>
-
-          </a>
-        </li>
-       {{ end }}
-      </ul>
+    <div class="posts-header">
+      <h3 class="title title-3 xs-pb-20">
+        {{ $numberOfArticles }} Stories by {{ .Title }}
+      </h3>
     </div>
+
+    <ul class="listing-posts-items list-unstyled xs-mb-0">
+      {{ range $elem_index, $elem_val := (where (where .Site.Pages
+      "Params.layout" "blog") ".Params.author" $author) }} {{ $articlePermalink
+      := "" }} {{ if eq $.Site.Params.env "local" }} {{ $articlePermalink =
+      .Permalink }} {{ else if eq $.Site.Params.env "staging" }} {{
+      $articlePermalink = replace .Permalink "beta" "www" }} {{ else }} {{
+      $articlePermalink = .Permalink }} {{ end }} {{ $articleSlug := replaceRE
+      "(https://www.section.io/)|(http://localhost:1313/)|(https://beta.section.io/)"
+      "" $articlePermalink }}
+
+      <li class="listing-posts-item mix {{ with .Params.tags }}{{ range . }}{{ lower . }} {{ end }}{{ end }}">
+        <a class="decoration-none resource-block-item" href="{{ .RelPermalink }}">
+          <div class="resource-block-item-wrap fill-white flex cta-shadow flex-column">
+            <img src="{{ if eq $.Site.Params.env " local" }}{{ replace (index .Params.images 0).url "/guruspedia" ""
+              }}{{ else }}{{ (index .Params.images 0).url }}{{ end }}" {{ if (index .Params.images 0).alt}}
+              alt="{{ (index .Params.images 0).alt }}" {{ end }} />
+
+            <div class="resource-block-item-content flex flex-column">
+              <div class="resource-block-item-content-inner pt-5 pb-5">
+                <div class="listing-posts-textitems">
+                  {{ with .Params.topics }}
+                  <p class="texttopic text-16 text-blockquote xs-mb-6">
+                    #{{ delimit . ", " | title }}
+                  </p>
+                  {{ end }}
+                  <p class="textdate text-16 text-blockquote xs-mb-6">
+                    {{ .Date.Format "Jan 2, 2006" }}
+                  </p>
+                </div>
+
+                <h3 class="title-5.5 text-link xs-mb-10">{{ .Title }}</h3>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
   </div>
 </section>
 
