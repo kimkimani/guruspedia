@@ -7,7 +7,7 @@
         <div class="hero-blocks-middle">
           <h1 class="title-3 bold xs-mb-20">{{ .Title }}</h1>
           {{ if .Date }}
-          <h5 class="text-14">Posted {{ .Date.Format "January 2, 2006" }}</h5>
+          <h5 class="text-14 sm-pt-20" >Posted {{ .Date.Format "January 2, 2006" }}</h5>
           {{ end }} <img class="heroimage relative prl-5 sm-pt-20" src="{{ if eq
           $.Site.Params.env " local" }}{{ replace (index .Params.images 0).url "guruspedia/" "" }}{{ else }}{{ (index
             .Params.images 0).url }}{{ end }}" alt="{{ (index .Params.images 0).alt }}" />
