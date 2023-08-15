@@ -43,9 +43,7 @@
             <div class="tag-links">
               {{ range . }} {{- $topicURLparts := slice "topic" (urlize .) -}}
               {{- $topicURL := delimit $topicURLparts "/"| printf "/%s/" -}}
-
               <a href="{{ $topicURL }}">{{ . }}</a>
-
               {{ end }}
             </div>
           </div>
@@ -69,7 +67,7 @@
           {{ end }}
         </div> -->
 
-        {{if .Params.authors}}
+        {{if .Params.author}}
         <div class="author-card">
           {{ with $.Site.GetPage $author_page }}
           <div class="image-circular">
