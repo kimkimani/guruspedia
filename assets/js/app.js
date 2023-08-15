@@ -137,23 +137,6 @@ var app = (function() {
     });
   }
 
-  // jQuery function to randomize the slick slider slides on refresh.
-  $.fn.randomize = function (selector) {
-    let $elems = selector ? $(this).find(selector) : $(this).children(),
-        $parents = $elems.parent();
-
-    $parents.each(function () {
-      $(this).children(selector).sort(function (childA, childB) {
-        // * Prevent last slide from being reordered
-        if($(childB).index() !== $(this).children(selector).length - 1) {
-          return Math.round(Math.random()) - 0.5;
-        }
-      }).detach().appendTo(this);
-    });
-
-    return this;
-  };
-
   return {
     start: init
   };

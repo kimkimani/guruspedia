@@ -73,14 +73,12 @@
 
       li {
         margin: 5px 0;
+        
 
         a {
           text-decoration: none;
           color: #333;
-
-          &:hover {
-            color: #1d75d3;
-          }
+          @include link-effect;
         }
       }
     }
