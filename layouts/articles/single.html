@@ -44,7 +44,7 @@
 
             </div>
             {{ range . }}
-            {{- $topicURLparts := slice "tag" (urlize .) -}}
+            {{- $topicURLparts := slice "topic" (urlize .) -}}
             {{- $topicURL := delimit $topicURLparts "/"| printf "/%s/" -}}
             <div class="tag-links col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
               <a class="tag-text-link col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2" href="{{ $topicURL }}">{{
@@ -55,7 +55,7 @@
           {{ end }}
         </div>
 
-        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
+        <!-- <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
           {{ if .Params.tags }}
             <div class="blog-tags">
               {{ range .Params.tags }}
@@ -63,7 +63,7 @@
               {{ end }}
             </div>
           {{ end }}
-        </div>
+        </div> -->
 
         <div class="author-card">
           
