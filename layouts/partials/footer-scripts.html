@@ -1,10 +1,9 @@
 {{ $jquery := resources.Get "js/vendor/jquery.js" }}
-{{ $aos := resources.Get "js/vendor/aos.js" }}
 {{ $axios := resources.Get "js/vendor/axios.js" }}
 {{ $lozad := resources.Get "js/vendor/lozad.js" }}
 {{ $main := resources.Get "js/app.js" }}
 
-{{ $defaultJS := slice $jquery  $aos $axios $lozad $main | resources.Concat "js/app.js" | resources.Minify }}
+{{ $defaultJS := slice $jquery $axios $lozad $main | resources.Concat "js/app.js" | resources.Minify }}
 
 {{ $secureJS := $defaultJS | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
