@@ -145,20 +145,14 @@
 
 // Post tags
 
-.topics-container {
-  display: flex;
-
-  align-items: center;
-}
-
 .tag-links {
   text-transform: uppercase;
   margin-top: 30px;
-
+  margin-bottom: 10px;
 
   a {
     color: white;
-    // border: 1.5px solid #4CAF50;
+    border: 2px solid #1d9ad1;
     background: #1d9ad1;
     padding: 3.5px;
     text-decoration-color: #fff;
@@ -167,6 +161,7 @@
 
   :hover {
     background: #4caf50;
+    border: 2px solid #4caf50;
   }
 }
 
@@ -181,10 +176,7 @@
   fill: #fff;
 }
 
-.valid-tags {
-  display: none;
-}
-
+//author links
 .section-rich-texts {
   @extend .text-20-regular;
 
@@ -230,7 +222,6 @@
   }
 
   &.blog-styling {
-
     p,
     ul li,
     ol li {

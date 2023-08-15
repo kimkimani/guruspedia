@@ -2,39 +2,28 @@
 <section class="listing-posts">
   <div class="resource-block-inner flex flex-wrap justify-center">
     <div class="posts-header">
-    <h3 class="title">RECENT STORIES</h3>
+      <h3 class="title">RECENT STORIES</h3>
     </div>
-   
-    <ul class=" listing-posts-items list-unstyled xs-mb-0">
-      {{- $pages := where .Site.Pages "Params.layout" "blog"
-      -}} {{- if .Data.Term -}} {{- $terms := slice .Data.Term }} {{- $pages =
-      where $pages ".Params.topics" "intersect" $terms -}} {{- end -}} {{
-      $paginator := .Paginate $pages 20 }} {{ range $paginator.Pages }}
 
-      {{ if .Date }}
+    <ul class="listing-posts-items list-unstyled xs-mb-0">
+      {{- $pages := where .Site.Pages "Params.layout" "blog" -}} {{- if
+      .Data.Term -}} {{- $terms := slice .Data.Term }} {{- $pages = where $pages
+      ".Params.topics" "intersect" $terms -}} {{- end -}} {{ $paginator :=
+      .Paginate $pages 20 }} {{ range $paginator.Pages }} {{ if .Date }}
 
-      <li
-        class="listing-posts-item mix {{ with .Params.tags }}{{ range . }}{{ lower . }} {{ end }}{{ end }}"
-      >
-        <a
-          class="decoration-none resource-block-item"
-          href="{{ .RelPermalink }}"
-        >
-          <div
-            class="resource-block-item-wrap fill-white flex cta-shadow flex-column"
-          >
-            <img src="{{ if eq $.Site.Params.env "local" }}{{ replace (index
-            .Params.images 0).url "/guruspedia" "" }}{{ else }}{{
-            (index .Params.images 0).url }}{{ end }}" {{ if (index
-            .Params.images 0).alt}} alt="{{ (index .Params.images 0).alt }}"{{
-            end }}/>
+      <li class="listing-posts-item mix {{ with .Params.tags }}{{ range . }}{{ lower . }} {{ end }}{{ end }}">
+        <a class="decoration-none resource-block-item" href="{{ .RelPermalink }}">
+          <div class="resource-block-item-wrap fill-white flex cta-shadow flex-column">
+            <img src="{{ if eq $.Site.Params.env " local" }}{{ replace (index .Params.images 0).url "/guruspedia" ""
+              }}{{ else }}{{ (index .Params.images 0).url }}{{ end }}" {{ if (index .Params.images 0).alt}}
+              alt="{{ (index .Params.images 0).alt }}" {{ end }} />
 
             <div class="resource-block-item-content flex flex-column">
               <div class="resource-block-item-content-inner pt-5 pb-5">
                 <div class="listing-posts-textitems">
                   {{ with .Params.topics }}
                   <p class="texttopic text-16 text-blockquote xs-mb-6">
-                  #{{ delimit . ", " | title }}
+                    #{{ delimit . ", " | title }}
                   </p>
                   {{ end }}
 
@@ -81,10 +70,8 @@
           </div>
         </a>
       </li>
-      {{ end }}
-      {{ end }}
+      {{ end }} {{ end }}
     </ul>
     {{ template "_internal/pagination.html" . }}
-
   </div>
 </section>

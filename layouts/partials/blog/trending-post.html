@@ -16,18 +16,12 @@
         {{- $filteredPages = $filteredPages | first 10 -}} {{- range
         $filteredPages -}}
         <li
-          class="enged-listing-posts-item mix flex cta-shadow flex-column {{ with .Params.tags }}{{ range . }}{{ lower . }} {{ end }}{{ end }}"
-        >
-          <a
-            class="decoration-none xs-pb-20 xs-pt-20 prl-25 flex"
-            href="{{.Permalink}}"
-          >
+          class="enged-listing-posts-item mix flex cta-shadow flex-column {{ with .Params.tags }}{{ range . }}{{ lower . }} {{ end }}{{ end }}">
+          <a class="decoration-none xs-pb-20 xs-pt-20 prl-25 flex" href="{{.Permalink}}">
             <div class="enged-listing-posts-item-image">
-              <img src="{{ if eq $.Site.Params.env "local" }}{{ replace (index
-              .Params.images 0).url "/guruspedia" "" }}{{ else }}{{
-              (index .Params.images 0).url }}{{ end }}" {{ if (index
-              .Params.images 0).alt}} alt="{{ (index .Params.images 0).alt }}"{{
-              end }}/>
+              <img src="{{ if eq $.Site.Params.env " local" }}{{ replace (index .Params.images 0).url "/guruspedia" ""
+                }}{{ else }}{{ (index .Params.images 0).url }}{{ end }}" {{ if (index .Params.images 0).alt}}
+                alt="{{ (index .Params.images 0).alt }}" {{ end }} />
             </div>
             <div class="enged-listing-posts-item-details">
               <div class="enged-listing-posts-item-details-inner">
