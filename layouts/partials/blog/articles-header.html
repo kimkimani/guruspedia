@@ -23,27 +23,5 @@
       {{ end }}
     </div>
   </div>
-
-  <section class="valid-tags">
-
-      <div class="section-container enged-listing-categories-container">
-        <p class="xs-pb-10 text-18-medium text-testimonial">Topics</p>
-        <ul class="list-unstyled list-flex flex-wrap data-filter-group">
-          {{ $currentPage := . }}
-          {{ if hugo.Environment | eq "development" }}
-          <li class="xs-pr-20"><a href="/" class="{{ if isset $currentPage.Data "Term" }}text-18-regular{{ else }}text-18-medium{{ end }} text-light-blue decoration-none" \>All</a> </li>
-          {{ else }}
-          <li class="xs-pr-20"><a href="/" class="{{ if isset $currentPage.Data "Term" }}text-18-regular{{ else }}text-18-medium{{ end }} text-light-blue decoration-none" \>All</a> </li>
-          {{ end }}
-          
-          {{ $baseurl := .Site.BaseURL }}
-  
-          {{ range .Site.Taxonomies.topics }}
-          <li class="xs-pr-20"><a href="{{ .Page.Permalink }}" class="{{ if eq $currentPage.Permalink .Page.Permalink }}text-18-medium{{ else }}text-18-regular{{ end }} text-light-blue decoration-none">{{ .Page.Title }}</a> </li>
-          {{ end }}
-        </ul>
-      </div>
-  
-  </section>
   
 </article>

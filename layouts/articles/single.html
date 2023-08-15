@@ -33,7 +33,7 @@
         {{ end }}
 
         <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2" >
-          {{ with .Params.topics }}
+          {{ with .Params.tags }}
           <div class="topics-decoration">
             <div class="tag-icon">
               <svg class="tags__badge" width="16" height="16" viewBox="0 0 32 32">
@@ -44,7 +44,7 @@
 
             </div>
             {{ range . }}
-            {{- $topicURLparts := slice "topic" (urlize .) -}}
+            {{- $topicURLparts := slice "tag" (urlize .) -}}
             {{- $topicURL := delimit $topicURLparts "/"| printf "/%s/" -}}
             <div class="tag-links col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
               <a class="tag-text-link col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2" href="{{ $topicURL }}">{{
@@ -52,11 +52,9 @@
             </div>
             {{ end }}
           </div>
-  
           {{ end }}
         </div>
 
-        
         <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-2">
           {{ if .Params.tags }}
             <div class="blog-tags">
@@ -66,6 +64,7 @@
             </div>
           {{ end }}
         </div>
+
         <div class="author-card">
           
           {{ with $.Site.GetPage $author_page }}

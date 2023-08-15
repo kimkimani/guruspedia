@@ -6,12 +6,8 @@ url: /best-open-source-ecommerce-platforms/
 title: The Best Open-source E-Commerce Platforms in 2023
 description: This guide provide an open-source e-commerce software comparison. If you’re a developer considering making a change in your e-commerce platform of choice, this is a great place to start exploring what other options exist.
 date: 2023-08-08T15:32:54-04:00
-topics: [Open Source, Open Source]
-tags:
-  - "go"
-  - "golang"
-  - "hugo"
-  - "development"
+topics: [Open Source]
+tags: [Open Source]
 author: joseph-chege
 excerpt_separator: <!--more-->
 images:

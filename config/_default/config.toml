@@ -18,6 +18,7 @@ pygmentsStyle = "monokai"
    guruspedia = "/:slug/"
    articles = "/:slug/"
    topics = "/topic/:slug/"
+   tags = "/tag/:slug/"
 [author]
   name = "Guru Spedia"
   email = "guruspedia@gmail.com"
