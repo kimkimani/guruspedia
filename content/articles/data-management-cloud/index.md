@@ -7,6 +7,7 @@ title: Understanding the Concept of Data Management Cloud
 description: Learn how and why More and more firms will take up cloud data management as they shift their operations online.
 date: 2023-07-21T06:25:51-04:00
 topics: [Cloud]
+author: abiola-farounbi
 excerpt_separator: <!--more-->
 images:
 
