@@ -6,7 +6,7 @@ url: /complete-guide-to-material-ui-in-angular-and-json-server/
 title: Complete Guide to Material UI in Angular and JSON-Server
 description: This guide will teach you how to use Material UI in Angular. Using Material UI, you will build a CRUD app using JSON-Server. Dive in and build this simple employee management app with Angular, Material UI, and JSON-Server.
 date: 2023-08-05T11:21:15-04:00
-topics: [Web, React]
+topics: [Web, Angular, Material UI]
 excerpt_separator: <!--more-->
 images:
   - url: /complete-guide-to-material-ui-in-angular-and-json-server/hero.png

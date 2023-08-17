@@ -6,7 +6,7 @@ url: /how-to-use-bazel-cache-to-improve-bazel-build-times/
 title: How to Use Bazel Cache to Improve Bazel Build Performance
 description: In this article, you'll learn how to set up a local and a remote cache to improve Bazel build performance. You’ll also understand the pros and cons of caching information.
 date: 2023-07-25T05:08:03-04:00
-topics: [Build]
+topics: [Build, Bazel]
 pick: [top]
 excerpt_separator: <!--more-->
 images:

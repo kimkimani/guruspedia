@@ -6,7 +6,7 @@ url: /how-test-nextjs-apps-with-jest/
 title: How to Test Next.js Applications with Jest
 description: Learn how to use the Jest testing framework and carry out unit testing for Next.js apps. One of the best frameworks for Next.js tests is Jest. Tests are used to describe the expected behavior of a piece of code.
 date: 2023-08-01T09:24:55-04:00
-topics: [Coding, Web]
+topics: [Coding, Next.js]
 excerpt_separator: <!--more-->
 images:
   - url: /how-test-nextjs-apps-with-jest/hero.png

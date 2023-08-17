@@ -6,7 +6,7 @@ url: /how-to-create-crud-apis-in-flask/
 title: Guide to Creating CRUD APIs in Flask
 description: This article will go through the steps of setting up a CRUD Restful API using Flask. You will use an SQLite database to interact with a Flask CRUD Restful API application data.
 date: 2023-07-28T05:44:03-04:00
-topics: [Coding, Web]
+topics: [Coding, Flask, API]
 pick: [top]
 author: adeshina-peter
 excerpt_separator: <!--more-->

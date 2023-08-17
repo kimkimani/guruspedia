@@ -6,7 +6,7 @@ url: /best-performance-practices-for-scaling-nodejs-applications/
 title: Best Performance Practices for Scaling Node.js applications - Boosting Node.js app
 description: This guide covers the best practices and solutions in hand for scaling Node.js apps. Buckle up and get ready to boost your Node.js APIs like a pro.
 date: 2023-07-20T00:00:00-01:00
-topics: [Performace]
+topics: [Performace, Node.js]
 pick: [top]
 author: joseph-chege
 excerpt_separator: <!--more-->

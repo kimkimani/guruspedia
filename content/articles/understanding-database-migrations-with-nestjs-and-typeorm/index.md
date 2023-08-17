@@ -6,10 +6,10 @@ url: /understanding-database-migrations-with-nestjs-and-typeorm/
 title: Understanding Database Migrations with NestJS and TypeORM
 description: Learn the various functionalities involved with migrations in a NestJS application using TypeORM.
 date: 2023-07-20T00:00:00-03:00
-topics: [Nest.js, TypeORM]
+topics: [Nest.js, TypeORM, Database]
+author: joseph-chege
 excerpt_separator: <!--more-->
 images:
-
   - url: /understanding-database-migrations-with-nestjs-and-typeorm/hero.png
     alt: Understanding Database Migrations with NestJS and TypeORM
 ---

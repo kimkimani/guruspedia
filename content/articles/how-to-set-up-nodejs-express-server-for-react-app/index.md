@@ -6,13 +6,11 @@ url: /how-to-set-up-nodejs-express-server-for-react-app/
 title: How to Build a Node.js Express Server for React Apps
 description: This tutorial will show you how to combine a React.js application with a Node.js Express server to run a basic fullstack application.
 date: 2023-07-27T05:44:03-04:00
-topics: [Web, Coding]
+topics: [Coding, Node.js, React.js, API]
 excerpt_separator: <!--more-->
 images:
-
   - url: /how-to-set-up-nodejs-express-server-for-react-app/hero.png
     alt: How to Set up a Node.js Express Server for React App
-
 ---
 
 React is a JavaScript-based framework for building fast and interactive UIs for mobile and web apps. Currently, it's the most popular JavaScript framework for building frontend applications. A [2022 survey](https://survey.stackoverflow.co/2022/#most-popular-technologies-webframe) carried out by stack overflow indicated that React is dominating framework for building backend applications for both the Professional Developers and those Learning to Code.

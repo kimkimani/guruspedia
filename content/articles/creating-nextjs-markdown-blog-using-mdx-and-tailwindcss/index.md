@@ -6,7 +6,7 @@ url: /creating-nextjs-markdown-blog-using-mdx-and-tailwindcss/
 title: Creating a Next.js Markdown Blog using MDX and TailwindCSS
 description: Use Next.js with MDX to create Markdown-based blog content, style with Tailwind CSS, and display the content using Next.js. Then deploy the Next.js Markdown app online using Vercel.
 date: 2023-08-06T11:17:16-04:00
-topics: [Web, ReactJS, NextJS]
+topics: [Web, React.js, Next.js]
 excerpt_separator: <!--more-->
 images:
   - url: /creating-nextjs-markdown-blog-using-mdx-and-tailwindcss/hero.jpg

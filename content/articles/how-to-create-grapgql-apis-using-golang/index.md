@@ -6,11 +6,10 @@ url: /how-to-create-grapgql-apis-using-golang/
 title: The Definitive Guide on Creating GrapgQL APIs Using Golang
 description: This tutorial will teach you how to create GraphQL APIs using Golang LIKE A PRO. This approach reduces the number of requests needed to fetch all the data to improve the performance and efficiency of your APIs
 date: 2023-07-20T00:00:00-12:00
-topics: [Coding, Go] 
+topics: [Coding, Golang, GraphQL, API] 
 pick: [top]
 excerpt_separator: <!--more-->
 images:
-
   - url: /how-to-create-grapgql-apis-using-golang/hero.png
     alt: How to Create GrapgQL Apis Using Golang
 ---

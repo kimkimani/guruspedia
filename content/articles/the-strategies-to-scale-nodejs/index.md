@@ -6,7 +6,7 @@ url: /the-strategies-to-scale-nodejs/
 title: The Best Strategies to scale Node.js Apps
 description: This guide covers the three ways to scale an application:cloning, decomposition, and data sharding.
 date: 2023-07-21T06:25:51-04:00
-topics: [Performace]
+topics: [Performace, Node.js]
 pick: [top]
 excerpt_separator: <!--more-->
 images:

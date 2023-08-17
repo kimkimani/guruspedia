@@ -6,7 +6,8 @@ url: /consuming-graphqL-api-with-reactjs/
 title: Consuming GraphQL API with React.js
 description: This article will teach you how to consume your GraphQL API using React.js LIKE A PRO. You will learn how to fetch data in React from a GraphQL API.
 date: 2023-07-29T05:44:03-04:00
-topics: [Coding]
+topics: [React.js, GraphQL]
+author: joseph-chege
 excerpt_separator: <!--more-->
 images:
 

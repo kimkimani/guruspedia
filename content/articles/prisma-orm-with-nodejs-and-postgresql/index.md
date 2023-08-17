@@ -6,7 +6,7 @@ url: /prisma-orm-with-nodejs-and-postgresql/
 title: Using Prisma ORM with Node.js and PostgreSQL
 description: In this tutorial, you will learn how to run Prisma with a Node.js PostgreSQL Project, A COMPLETE GUIDE.
 date: 2023-07-29T05:44:03-04:00
-topics: [Coding]
+topics: [Coding, Node.js, API, Database]
 excerpt_separator: <!--more-->
 images:
 

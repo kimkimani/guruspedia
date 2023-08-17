@@ -6,7 +6,7 @@ url: /how-to-setup-internationalization-in-reactjs-using-react-18next/
 title: A Definitive Guide to Internationalization in React.js using react-i18next
 description: In this guide, you will learn how to use react-i18next to implement Internationalization in React apps.
 date: 2023-07-20T00:00:00-13:00
-topics: [Web, Coding]
+topics: [React.js, Internationalization]
 pick: [top]
 author: joseph-chege
 excerpt_separator: <!--more-->

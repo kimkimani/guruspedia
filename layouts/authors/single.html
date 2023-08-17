@@ -85,9 +85,11 @@
               <div class="resource-block-item-content-inner pt-5 pb-5">
                 <div class="listing-posts-textitems">
                   {{ with .Params.topics }}
-                  <p class="texttopic text-16 text-blockquote xs-mb-6">
-                    #{{ delimit . ", " | title }}
+                  {{ range . }}       
+                  <p class="texttopic text-16 text-blockquote xs-mb-4">
+                    {{ . }}
                   </p>
+                  {{ end }}
                   {{ end }}
                   <p class="textdate text-16 text-blockquote xs-mb-6">
                     {{ .Date.Format "Jan 2, 2006" }}

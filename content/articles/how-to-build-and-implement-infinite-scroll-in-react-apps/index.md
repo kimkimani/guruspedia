@@ -6,7 +6,7 @@ url: /how-to-build-and-implement-infinite-scroll-in-react-apps/
 title: How to Build and Implement Infinite Scroll in React Apps
 description: Have you ever created an application that serves user data from a backend server or an API? This guide will help you implement infinite scroll to your React applications.
 date: 2023-07-28T05:44:03-04:00
-topics: [Coding, Web]
+topics: [Coding, React.js]
 excerpt_separator: <!--more-->
 images:
 

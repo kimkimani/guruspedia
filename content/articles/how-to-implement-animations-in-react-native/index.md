@@ -6,7 +6,7 @@ url: /how-to-implement-animations-in-react-native/
 title: How to Implement Animations in React Native
 description: Embark on this journey and unlock the potential of animations in React Native. Let's make your React Native mobile app shine with stunning animations.
 date: 2023-08-04T06:15:52-04:00
-topics: [Mobile, React Native]
+topics: [React Native]
 excerpt_separator: <!--more-->
 images:
 

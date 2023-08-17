@@ -6,8 +6,9 @@ url: /vuejs-state-management-using-pinia/
 title: A Comprehensive Guide to Vue.js State Management using Pinia
 description: Learn how to use Pinia for Vue.js states management LIKE A PRO with Examples for simplicity.
 date: 2023-07-20T00:00:00-12:00
-topics: [Web, Coding]
+topics: [Web, Coding, Vue.js]
 pick: [top]
+author: joseph-chege
 excerpt_separator: <!--more-->
 images:
 

@@ -6,7 +6,7 @@ url: /the-ultimate-guide-to-bazel-queries/
 title: The Ultimate Guide to Bazel Queries
 description: This guide will share a detailed overview of how Bazel Queries work with code samples and usecases for various queries.
 date: 2023-07-26T03:28:29-04:00
-topics: [Build]
+topics: [Build, Bazel]
 pick: [top]
 excerpt_separator: <!--more-->
 images:

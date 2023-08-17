@@ -6,7 +6,7 @@ url: /a-complete-guide-to-creating-flask-apis-react-apps/
 title: The Complete Guide to Creating Flask APIs with React apps
 description: Learn the steps of building and integrating a Flask API into any React Application LIKE A PRO. You will create a Flask application that saves data in a MySQL and expose a CRUD API so React can consume it.
 date: 2023-07-31T00:39:04-04:00
-topics: [Web]
+topics: [Web, React.js, Flask]
 author: abiola-farounbi
 pick: [top]
 excerpt_separator: <!--more-->

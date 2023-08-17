@@ -7,6 +7,7 @@ title: A Complete Guide to Making API Calls in Android using Retrofit
 description: In this article, you will build an android app using Retrofit. One library that stands out for API HTTP communication is Retrofit to facilitate communication between your android application and an external server(API).
 date: 2023-07-20T00:00:00-01:00
 topics: [Android Studio]
+author: joseph-chege
 excerpt_separator: <!--more-->
 images:
 

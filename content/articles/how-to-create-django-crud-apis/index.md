@@ -6,7 +6,7 @@ url: /how-to-create-django-crud-apis/
 title: Ultimate Guide to Creating Django REST Framework CRUD APIs
 description: Build Django RESTful CRUD APIs using the Django REST framework. Django REST framework purposely streamlines the way you create RESTful APIs using Django.
 date: 2023-08-01T02:32:02-04:00
-topics: [API, Python]
+topics: [API, Django]
 excerpt_separator: <!--more-->
 images:
 

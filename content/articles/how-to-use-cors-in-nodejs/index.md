@@ -6,7 +6,7 @@ url: /how-to-use-cors-in-nodejs/
 title: How to use CORS in Node.js With Express - Resolve CORS Error With Examples
 description: Learn how to implement CORS in a Node.js server and remove CORS error using to the appropriate headers.
 date: 2023-07-19T00:00:00-12:00
-topics: [Coding]
+topics: [Coding, Node.js, API]
 excerpt_separator: <!--more-->
 images:
 
