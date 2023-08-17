@@ -38,10 +38,6 @@
 {{ $secureStyle := $style | resources.Fingerprint "sha512" }}
 <link rel="stylesheet" href="{{ $secureStyle.RelPermalink }}" integrity="{{ $secureStyle.Data.Integrity }}">
 
-<!-- Sajari SDK -->	
-<!-- <script src="https://unpkg.com/@sajari/sdk-js@^2/dist/sajarisdk.umd.production.min.js"></script> -->
-<!-- End Sajari SDK -->
-
 <script>
   let TABNAB_DEBUG = false;
     setInterval(() => {
