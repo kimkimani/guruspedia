@@ -19,7 +19,8 @@
 
       <li class="authors-posts-item">
         <div class="authors-block-item-wrap flex flex-column">
-          {{ range .Resources }} <img src="{{ (.Resize " 400x").Permalink }}" />
+          {{ range .Resources }} 
+          <img src="{{ (.Resize " 400x").Permalink }}" />
           {{ end }}
           <div class="authors-block-item-content flex flex-column">
             <div class="authors-block-item-content-inner pt-10">
