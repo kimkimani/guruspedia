@@ -25,20 +25,9 @@
                     </p>
                 </div>
             </div>
-            {{ end }} {{ with .Site.Params.footer.sitemap }}
-            <div class="col-lg-2 col-md-6">
-                <div class="site-footer-widget">
-                    <h5 class="site-footer-widget-title">{{ .title }}</h5>
-                    <ul class="site-footer-widget-links">
-                        {{ range .link }}
-                        <li>
-                            <a class="decoration-none" href="{{ .url | absURL }}">{{ .name }}</a>
-                        </li>
-                        {{ end }}
-                    </ul>
-                </div>
-            </div>
-            {{ end }} {{ with .Site.Params.footer.social }}
+            {{ end }}
+  
+            {{ with .Site.Params.footer.social }}
             <div class="col-lg-2 col-md-6">
                 <div class="site-footer-widget">
                     <h5 class="site-footer-widget-title">{{ .title }}</h5>
@@ -51,7 +40,24 @@
                     </ul>
                 </div>
             </div>
-            {{ end }} {{ with .Site.Params.footer.service }}
+            {{ end }}
+
+            {{ with .Site.Params.footer.sitemap }}
+            <div class="col-lg-2 col-md-6">
+                <div class="site-footer-widget">
+                    <h5 class="site-footer-widget-title">{{ .title }}</h5>
+                    <ul class="site-footer-widget-links">
+                        {{ range .link }}
+                        <li>
+                            <a class="decoration-none" href="{{ .url | absURL }}">{{ .name }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+            {{ end }}
+            
+            {{ with .Site.Params.footer.service }}
             <div class="col-lg-3 col-md-6">
                 <div class="site-footer-widget">
                     <h5 class="site-footer-widget-title">{{ .title }}</h5>
