@@ -53,3 +53,45 @@ weight = 80
 [[related.indices]]
 name  = "date"
 weight = 10
+
+[params.footer]
+    # Footer Contact Info
+    [params.footer.contactInfo]
+      title   = "Contact Info:"
+      address = "GurusPedia"
+      phone   = "Email Address"
+      email   = "guruspedia@gmail.com"
+      # Footer Sitemap
+      [params.footer.sitemap]
+        title   = "Sitemap:"
+        [[params.footer.sitemap.link]]
+          name = "About GurusPedia"
+          url  = "/about"
+        [[params.footer.sitemap.link]]
+          name = "Write With Us"
+          url  = "/"
+        [[params.footer.sitemap.link]]
+          name = "Instructors"
+          url  = "/authors"
+        [[params.footer.sitemap.link]]
+          name = "Contact"
+          url  = "/contact"
+      # Footer Social Media
+      [params.footer.social]
+        title   = "Socials:"
+        [[params.footer.social.link]]
+          name = "Twiter"
+          url  = "https://twitter.com/GurusPedia"
+        [[params.footer.social.link]]
+          name = "Linkedin"
+          url  = "https://www.linkedin.com/in/gurus-pedia-83b777287/"
+        [[params.footer.social.link]]
+          name = "Dribbble"
+          url  = "/contact"
+        [[params.footer.social.link]]
+          name = "Instagram"
+          url  = "/contact"
+      # Footer Service
+      [params.footer.service]
+        title       = "GurusPedia Quest:"
+        description = "Tech Exploration and Enlightenment<br>Unleashing the Digital Curiosity<br>with Shared Brilliance One<br>Byte at a Time"

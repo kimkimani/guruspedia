@@ -182,3 +182,50 @@ $breakpoints: (
   );
   transition: all 1s ease;
 }
+
+
+@mixin mobile-xs{
+  @media(max-width:400px){
+    @content;
+    .site-footerwidget{
+      margin-left: 100px;
+    }  
+  }
+}
+@mixin mobile{
+  @media(max-width:575px){
+   
+    @content;
+
+    .site-footerwidget{
+      margin-left: 100px;
+    }  
+  }
+}
+@mixin tablet{
+  @media(max-width:767px){
+    @content;
+  }
+}
+@mixin desktop{
+  @media(max-width:991px){
+    @content;
+  }
+}
+@mixin desktop-lg{
+  @media(max-width:1200px){
+    @content;
+  }
+}
+
+@mixin desktop-xl{
+  @media(max-width:1400px){
+    @content;
+  }
+}
+
+@mixin desktop-4k{
+  @media(min-width:2000px){
+    @content;
+  }
+}
