@@ -426,6 +426,9 @@ body {
   display: flex;
   margin: 5px;
   align-items: center;
+  input{
+    background-color:#a8a8a81a;
+  }
 }
 /* Styles for the search input */
 #search-input {
