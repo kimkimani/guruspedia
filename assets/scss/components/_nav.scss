@@ -38,7 +38,6 @@ body {
   }
 
   &-inner {
-
     padding-left: 6%;
     padding-right: 6%;
     min-height: 80px;
@@ -82,7 +81,7 @@ body {
   &-secondary {
     display: none;
     margin-right: 30px;
-  
+
     &-items {
       li {
         a {
@@ -150,21 +149,21 @@ body {
       border-bottom: pxem(3) solid transparent;
       padding: 26px 0 26px;
 
-      &:hover a{
+      &:hover a {
         background-color: #1d9ad1;
         margin-top: 2px;
-        color:#EEE;
-        border-radius:5px;
+        color: #eee;
+        border-radius: 5px;
       }
 
       &:active {
-        color:#EEE;
+        color: #eee;
         //border-bottom-color: #1d9ad1;
       }
 
       &.active {
         //border-bottom-color: #1d9ad1;
-        color:#EEE;
+        color: #eee;
       }
 
       > a {
@@ -176,7 +175,6 @@ body {
   &-triggers {
     display: flex;
     z-index: 99999999999;
-    
 
     &-show {
       display: flex;
@@ -426,8 +424,8 @@ body {
   display: flex;
   margin: 5px;
   align-items: center;
-  input{
-    background-color:#a8a8a81a;
+  input {
+    background-color: #a8a8a81a;
   }
 }
 /* Styles for the search input */
@@ -452,5 +450,4 @@ body {
   background-color: #1d9ad1;
   border: 1px solid #1d9ad1;
   border-radius: 7px;
-
 }
