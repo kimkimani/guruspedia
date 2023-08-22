@@ -1,0 +1,50 @@
+{{ define "main" }}
+
+<section class="enged-listing-posts">
+  <div class="enged-listing-posts-container">
+    <div class="enged-listing-posts-content">
+      <div class="enged-listing-posts-header sm-pt-60">
+        <h3 class="title title-5.5">Search Results:</h3>
+        <p class="text text-color">Your Related Content.....</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="search-results"></div>
+<div class="search-loading">Searching...</div>
+
+<script id="search-result" type="text/x-js-template">
+
+  <section class="enged-listing-posts" >
+    <div class="enged-listing-posts-container" >
+      <div class="enged-listing-posts-content" >
+
+        <ul >
+
+          <li id="summary-${key}" class="enged-listing-posts-item mix flex cta-shadow flex-column">
+            <a class="decoration-none xs-pb-20 xs-pt-20 prl-25 flex" href="${link}">
+
+                  <div class="enged-listing-posts-item-details">
+                    <div class="enged-listing-posts-item-details-inner">
+
+                  <h3 class="title-3 text-link xs-mb-10">${title}</h3>
+                  <p class="text-18-regular text-color">
+                    ${snippet}
+                  </p>
+                  <p class="text-blockquote">${ isset categories }Categories: ${categories}<br>${ end }</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+<script src="/js/search.js"></script>
+
+{{end}}
