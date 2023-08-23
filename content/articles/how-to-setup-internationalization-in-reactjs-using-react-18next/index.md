@@ -4,14 +4,13 @@ status: publish
 published: true
 url: /how-to-setup-internationalization-in-reactjs-using-react-18next/
 title: A Definitive Guide to Internationalization in React.js using react-i18next
-description: In this guide, you will learn how to use react-i18next to implement Internationalization in React apps.
+description: In this guide, you will learn how to use react-i18next with exmaples to implement Internationalization in React apps.
 date: 2023-07-20T00:00:00-13:00
 topics: [React.js, Internationalization]
 pick: [top]
 author: joseph-chege
 excerpt_separator: <!--more-->
 images:
-
   - url: /how-to-setup-internationalization-in-reactjs-using-react-18next/hero.png
     alt: How to set up Internationalization in React.js using react-i18next
 ---
@@ -19,11 +18,11 @@ images:
 Internationalization, commonly refers to as **i18n**, allows you to develop applications that can quickly adapt to different languages and locales. This typically includes translating text to allow your users to experience other languages. The need for internationalization arises when an application is intended for use in multiple countries or regions, each with its own language Internationalization allows the application to be easily adapted to meet the specific needs of each market without creating a separate version for each.
 <!--more-->
 
-To implement internationalization React apps, you need the tools and libraries to let you add support for multiple languages so that a global audience can use them. In this guide, you will learn how to use i18next to implement Internationalization in React.
+To implement internationalization React apps, you need the tools and libraries to let you add support for multiple languages so that a global audience can use them. In this guide, you will learn how to use i18next to implement Internationalization in React with exmaples.
 
-### Installing the Needed Libraries
+### Installing NPM i18next Libraries
 
-To configure i18next, you require to install libraries that provide internationalization methods. First, ensure you have created a basic React application using the following command:
+To configure react-i18next exmaple, you require to install libraries that provide internationalization methods. First, ensure you have created a basic React application using the following command:
 
 ```bash
 npx create-react-app demo-app
@@ -48,7 +47,7 @@ To install the above libraries to your React app, run the following command:
 npm install i18next react-i18next i18next-http-backend i18next-browser-languagedetector bootstrap react-bootstrap
 ```
 
-### Creating Translation Files
+### Creating react-i18next Translation Files
 
 In this guide, you will create a basic Cafe React app. This application will have support from France, English and Spanish languages. Therefore, you will require creating translation files to load that application content based on user language preference.
 
@@ -146,11 +145,11 @@ Likewise, create an `es` folder inside the `public/locale` folder. Create a `tra
 }
 ```
 
-### Setting up i18next
+### Setting up react-i18next in React App
 
 To use react-i18next, you first need to initialize i18next for your project. This involves creating an instance of the i18next library and configuring it with react-i18next for your React app translations.
 
-Navigate to your project `src` directory and create an `i18n.js`. The below code shows how to initialize i18next with react-i18next.
+Navigate to your project `src` directory and create an `i18n.js`. The below code shows how to initialize i18next with react-i18next exmaples.
 
 ```js
 import i18n from "i18next";
@@ -187,7 +186,7 @@ The code above will use the i18next-http-backend module to load translations fro
 
 The `i18n` instance created above can be used for any React components to translate text in your application. Let’s now create the React component to display the earlier translation content while allowing i18n to load and display the content in the user language of choice.
 
-### Creating Component Context API
+### Creating react-i18next Component Context API
 
 This application has different languages. The application should be able to remember the language a user had previously selected. This application will use Context API to store these selections.
 
@@ -222,7 +221,7 @@ We will use these two to translate text and other interface elements in React.
 
 First, you need a component that i18next will use to translate its content based on the translation files we created earlier.
 
-###### Creating a Navigation Component
+#### Creating a react-i18next Navigation Component
 
 Let's create a Navigation component. This component will hold the Navbar elements as follows:
 
@@ -324,7 +323,7 @@ export default Navigation;
 
 - Finally, you will be required to add some CSS styling to your application. Navigate to this [GitHub repository](https://github.com/kimkimani/Internationalization-using-react-i18next/blob/main/src/index.css) and add the CSS styling to your application `src/index.css` file.
 
-###### Switching Between Languages
+#### Switching Between Languages
 
 To switch between languages, you need to execute the created component in your `App.js` file as follows:
 
@@ -363,9 +362,9 @@ Note that we are executing the `useState` hook to store the current language in 
 
 Based on the Application Context, `LocaleContext.Provider` provide the `locale` and `setLocale` values to the rest of the app. This allows the components to access the `locale` and `setLocale` values using the `useContext` hook. i18next will reuse the user selections and ensure the additional component are translated as such. This way, if you create additional components to the application.
 
-Let’s implement this scenario.
+Let’s implement this scenario wiht a prefect react-i18next example.
 
-###### Building a Demo Component
+#### Building a react-i18next Demo Component
 
 This component will display the items from the JSON translation files. Inside the `src/component` directory, create an `Item.js` file as follows:
 
@@ -455,7 +454,7 @@ return (
 );
 ```
 
-### Testing react-i18next App
+### Testing your react-i18next Example App
 
 At this point, your application should be similar to the following:
 
