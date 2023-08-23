@@ -4,7 +4,7 @@ status: publish
 published: true
 url: /how-to-build-nodejs-rest-apia-using-typescript/
 title: Ultimate Guide to Building Node.js REST APIs using TypeScript
-description: Using this setup, you go through the steps of setting up a Node.js RESTFul API using Typescript.
+description: Using this setup, you go through the steps of setting up a Node.js Express RESTFul API using Typescript and MongoDB.
 date: 2023-07-19T00:00:00-12:00
 topics: [Coding, Typescript, Node.js, API] 
 author: joseph-chege
@@ -12,11 +12,11 @@ excerpt_separator: <!--more-->
 images:
 
   - url: /how-to-build-nodejs-rest-apia-using-typescript/hero.png
-    alt: How to build Node.js REST APIs using TypeScript
+    alt: How to build Node.js Express REST APIs using TypeScript and MongoDB
 
 ---
 
-Typescript can be defined as a strict syntactical superset of JavaScript. It allows you to use features such as static typing to help you detect errors before compiling time. Typescript is more of JavaScript with added features. Any library that Node.js JavaScript uses can be applied with Typescript. However, Typescript has to transcompile to JavaScript to be executed. This article will help you will learn how to execute Typescript in Node.js. Using this setup, you go through the steps of setting up a Node.js RESTFul API using Typescript.
+Typescript can be defined as a strict syntactical superset of JavaScript. It allows you to use features such as static typing to help you detect errors before compiling time. Typescript is more of JavaScript with added features. Any library that Node.js JavaScript uses can be applied with Typescript. However, Typescript has to transcompile to JavaScript to be executed. This article will help you will learn how to execute Typescript in Node.js. Using this setup, you go through the steps of setting up a Express Node.js RESTFul API using Typescript and a MongoDB database.
 <!--more-->
 
 ### Prerequisites
@@ -30,15 +30,13 @@ To continue in this article, it is helpful to have the following:
 
 ### Setting up the Application
 
-First, initialize a Node.js project using an NPM command as follows:
+First, initialize a Node.js Express project that TypeScript need using an NPM command as follows:
 
 ```bash
 npm init -y
 ```
 
-This will create files to save project depending and executions scripts.
-
-To create a Node.js RESTFul API using Typescript, you need to install several dependencies:
+This will create files to save project depending and executions scripts. To create a Node.js RESTFul API using Typescript, you need to install several dependencies:
 
 To install the dev dependencies, use the following packages:
 
@@ -61,7 +59,7 @@ npx tsc init
 
 This guide will use core dependencies for implementing the RESTFul aspect of this application:
 
-- Express - For setting up the web server.
+- Express - For setting up the Node.js TypeScript web server.
 - Mongoose - For connection with MongoDB.
 
 Run the following command to install them:
@@ -83,7 +81,7 @@ To configure how to run the application, add a script for starting the developme
 "dev":"nodemon app.ts"
 ```
 
-### Setting up Node.js Typescript Server
+### Setting up Express Node.js Typescript Server
 
 In your project directory, create an `app.ts` file. In this file, you set up a Node.js Typescript server as follows:
 
@@ -113,7 +111,7 @@ app.use(express.urlencoded({extended:false}));
 const PORT = process.env.PORT || 3000;
 ```
 
-### Adding Database Connections
+### Adding a TypeScript Express MongoDB Connections
 
 In the `app.ts`, let's create methods for establishing a connection to the database. Note the following connection uses a locally installed MongoDB.If you are using [MongoDB cloud](https://www.mongodb.com/cloud), ensure the connection string `mongodb://localhost:27017/notes` reflects accordingly:
 
@@ -145,7 +143,7 @@ app.listen(PORT, async () => {
 });
 ```
 
-### Setting up Notes Model
+### Setting up a TypeScript Express Noe.js Notes Model
 
 This guide will use Notes to demonstrate how to build  Node.js Typescript  REST API. Therefore, you will be required to create a model.
 
@@ -189,7 +187,7 @@ const noteModel =  model('notes',NoteSchema);
 export default noteModel;
 ```
 
-### Getting All Notes
+### Getting All Notes Using TypeScript Express And MongoDB
 
 Let's now create a method for fetching data from the database using Typescript. Inside the project directory, create a `controller.ts` file. The file will host the functionalities to get all notes and add, update, and delete a note.
 
@@ -292,7 +290,7 @@ Send a *GET* request from your Postman to `http://localhost:3000/api/notes`. Bas
 
 ![How to build Node.js REST APIs using TypeScript](/how-to-build-nodejs-rest-apia-using-typescript/getting_notes.png)
 
-### Adding a Note
+### Using TypeScript Express to Add a Note to MongoDB
 
 Perhaps you didn't get any data in the above `data` array? Let's create a route to help add data to the database. In the `controller.ts` file, inside the `NotesController` class, define a function for adding a note as follows:
 
@@ -351,7 +349,7 @@ Note: These changes should reflect in your database as well:
 
 Likewise, you can send a *GET* request to `http://localhost:3000/api/notes` to test if the API can fetch the added note.
 
-### Updating a Note
+### Using TypeScript Express to Update a Note to MongoDB
 
 To update a note, navigate to the `controller.ts`. Inside the `NotesController` class, create a function for updating a note as follows:
 
@@ -410,7 +408,7 @@ You should receive the following response if the note was successfully updated:
 
 ![How to build Node.js REST APIs using TypeScript](/how-to-build-nodejs-rest-apia-using-typescript/updating_post.png)
 
-### Deleting a note
+### Using TypeScript Express to Delete a Note to MongoDB
 
 To delete a note, inside the `NotesController`, add a function for deleting a note:
 
@@ -454,6 +452,6 @@ From your Postman, send a DELETE request to `http://localhost:3000/api/notes/del
 
 And there, you have a complete Node.js Typescript RESTFul API.
 
-Now, you have gained confidence in Building Node.js REST APIs using TypeScript. Why not dive deeper and learn how to consume this API? This [How to Build a Node.js Express Server for React Apps](https://guruspedia.com/how-to-set-up-nodejs-express-server-for-react-app/) takes your ride to new heights.
+Now, you have gained confidence in Building Node.js Express REST APIs using TypeScript and MongoDB. Why not dive deeper and learn how to consume this API? This [How to Build a Node.js Express Server for React Apps](https://guruspedia.com/how-to-set-up-nodejs-express-server-for-react-app/) takes your ride to new heights.
 
 I hope you found it helpful
