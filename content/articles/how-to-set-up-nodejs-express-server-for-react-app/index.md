@@ -3,8 +3,8 @@ layout: blog
 status: publish
 published: true
 url: /how-to-set-up-nodejs-express-server-for-react-app/
-title: How to Build a Node.js Express Server for React Apps
-description: This tutorial will show you how to combine a React.js application with a Node.js Express server to run a basic fullstack application.
+title: How to Create React Apps With Node.js Express Server
+description: This tutorial will show you how server a React.js application with a Node.js Express server to run a basic fullstack application.
 date: 2023-07-27T05:44:03-04:00
 topics: [Coding, Node.js, React.js, API]
 excerpt_separator: <!--more-->
@@ -32,9 +32,9 @@ Node.js uses NPM and yarn to manage your project. These tools allow you to use N
 
 Given that these two frameworks make up the vast developer community, it would be great to combine them and run an application together. This way, you create a full-stack application leveraging the most popular frameworks for backend and frontend development.
 
-This tutorial will show you how to combine a React.js application with a Node.js Express server to run a basic fullstack application.
+This tutorial will show you how to server a React.js application with a Node.js Express server to run a fullstack application Create React App With Express.
 
-### Setting up a Node.js Server
+### Creating a React Node.js Server App
 
 To create this full-stack application, we need an API to serve data. This is where Node.js comes in handy. Create a Project directory. Inside this parent folder, create a `server` directory. Open a command line that points to this directory and initialize Node.js using the following command:
 
@@ -55,7 +55,7 @@ To install them, run:
 npm install express cors
 ```
 
-### Creating a Node.js API
+### Creating an Express Node.js API For your React App
 
 When using Node.js, you can create any API that fits your application. This allows you to combine any databases to manage your data and perform different operations.
 
@@ -136,7 +136,7 @@ node index.js
 
 If you open the URL `http://localhost:4000/data` on Postman or a browser, you should be served with the data you added in the `data.json` file.
 
-### Setting the Frontend Application with React
+### Creating the Frontend React Application with Express Server
 
 We want to consume this API using the React frontend. First, open a command line that points to your parent directory and initialize the Node.js application using:
 
@@ -229,7 +229,7 @@ return (
   );
 ```
 
-### Test the Fullstack App
+### Test the Fullstack Create React Express App
 
 To test this setup, ensure both the Node.js and React apps are running. Then go to `http://localhost:3000`.
 
@@ -237,7 +237,7 @@ React will server a UI that has the API data.
 
 ### Conclusion
 
-Now that you have mastered How to Build a Node.js Express Server for React Apps, why not dive deeper and learn the [Complete Guide to Creating Flask APIs with React apps](https://guruspedia.com/a-complete-guide-to-creating-flask-apis-react-apps/) and use Flask API Resource sharing with React. 
+Now that you have mastered How to create React Apps with a Node.js Express Server for , why not dive deeper and learn the [Complete Guide to Creating Flask APIs with React apps](https://guruspedia.com/a-complete-guide-to-creating-flask-apis-react-apps/) and use Flask API Resource sharing with React. 
 
 Or do you want to take your React skills to a new height? Learn [How to Build and Implement Infinite Scroll in React Apps](https://guruspedia.com/how-to-build-and-implement-infinite-scroll-in-react-apps/). Get crazier learning this [Consuming GraphQL API with ReactJS](https://guruspedia.com/consuming-graphqL-api-with-reactjs/) Definitive guide.
 

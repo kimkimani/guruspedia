@@ -15,7 +15,7 @@ images:
     alt: Kubernetes Cluster CI/CD pipeline Deployments using GitHub Actions and EKS
 ---
 
-In this tutorial, you will go through the steps of automating Kubernetes deployment with GitHub Actions. This guide will teach you how to create a GitHub Actions workflow that automates [Kubernetes deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) using GitHub.
+In this tutorial, you will go through the steps of automating Kubernetes deployment with GitHub Actions. This guide will teach you how to create a GitHub Actions workflow that automates EKS [Kubernetes deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) using GitHub.
 <!--more-->
 
 ### Introduction 
@@ -38,7 +38,7 @@ To follow along with this tutorial:
 - An [IAM user created and configured using AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) as this guide will use the AWS Elastic Kubernetes Serivice (EKS) to provision a Kubernetes cluster.
 Familiarity with [GitHub to host code repositories](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github).
 
-### Addressing Kubernetes Deployment Challenges with GitHub Actions
+### Addressing EKS Kubernetes Deployment Challenges with GitHub Actions
 
 Creating and managing Kubernetes deployment can be a little bit challenging. These challenges include:
 
@@ -83,7 +83,7 @@ CMD npm start
 ```
 This Dockerfile creates a Docker image using [multi-stage build](https://earthly.dev/blog/minimize-docker-images-size/#using-multistage-builds-to-slim-docker-images). It separates dependencies installation. The `base` stage installs all dependencies for development purposes, and the `final` stage only installs production dependencies, copies the necessary files, and runs the application.
 
-#### Creating the Manifest Files
+#### Creating the Kubernetes Manifest Files
 
 Kubernetes uses [manifest files](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/) to define and manage deployments. A Kubernetes manifest is a YAML file that contains the necessary deployment objects and resources to run a Kubernetes cluster.
 
@@ -136,7 +136,7 @@ Your application file structure should look as shown below:
 
 [Push](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository) the files to your GitHub repository.
 
-### Docker Images with GitHub Actions
+### Building EKS Docker Images with GitHub Actions
 
 Kubernetes manage and orchestrate Docker containers. When deploying applications on Kubernetes, you need to build a Docker image based on your application's Dockerfile. Once the image is built, you can push it to a container registry. Kubernetes can then pull the image from the container registry and use it to create and manage containers within a cluster, ensuring that the desired number of replicas are running based on the specified configuration.
 
@@ -159,7 +159,6 @@ Since these details are sensitive data, You need to add them to GitHub actions a
 
 To create these environment secrets, navigate to the **Settings** page of your GitHub repository and click on  **Secrets and Variables**. Select for **Actions**, then click on the create **New repository secret*. This way, sensitive configuration data will be executed as environment secrets during the CI runtime.
 
-
 You can checkout [this article](https://earthly.dev/blog/github-actions-environment-variables-and-secrets) on managing environment variables on GitHub.
 
 Add the following as the repository secrets:
@@ -173,7 +172,7 @@ Once you have them ready, the following image summarizes the complete steps and 
 
 ![GitHub Actions and EKS: Setting up GitHub actions environment variables](/kubernetes-cluster-pipeline-using-github-actions/variables.png)
 
-#### Laying Down the Workflow
+#### Laying Down the GitHub Action EKS Workflow
 
 GitHub Actions automatically detects a  `.github/workflows` directly to trigger CI/CD process. Ensure your GitHub repository has a `.github/workflows` folder and create a `deploy.yml` [workflow configuration file](https://docs.github.com/en/actions/using-jobs/using-jobs-in-a-workflow) in the folder:
 
@@ -220,7 +219,7 @@ jobs:
 
 The above code specifies a step in the "k8s_deployment" job that checks out the code from your GitHub repository and clones it to the build machine for use in subsequent steps.
 
-#### Building and pushing Docker images with GitHub Actions
+#### Building and Pushing GitHub EKS Docker images with GitHub Actions
 
 Now, we discuss the process of building and pushing your custom Docker image to DockerHub with GitHub Actions. As discussed earlier, GitHub action needs to authenticate to DockerHub to manage your docker images. To authenticate to DockerHub, Your machine will first login to DockerHub using the following GitHub action workflow:
 
@@ -250,7 +249,7 @@ Once authenticated, the workflow can push your Docker image artifact to DockerHu
 
 In the configuration above, GitHub Actions uses the `docker/build-push-action@v4` action to build and push the Docker image. The `context: .` sets the path to the directory that points to your Dockerfile path. It uses the `.`path to point to your current directory to execute your build command. GitHub Actions also sets the `push` flag to `true` to push the image to the DockerHub registry once the build command has successfully built the image. The image will be tagged based on `${{ secrets.DOCKERHUB_USERNAME }}/sample_image:latest`, where `DOCKERHUB_USERNAME` is the repository secrete value you added as your DockerHub username.
 
-### Deployment to Kubernetes Cluster
+### Deployment to EKS Kubernetes Cluster using GitHub Action Manifest
 
 To create your cluster, you can use managed services such as AWS [Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/) and [AZURE Kubernetes Services (AKS)](https://azure.microsoft.com/en-us/products/kubernetes-service) These services provide tools and features to run Kubernetes clusters. They let you deploy containerized applications to Kubernetes without installing, operating, and maintaining your own [Kubernetes control plane](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/). 
 
@@ -262,7 +261,7 @@ While creating the EKS cluster, ensure it has a running [Worker/Group node](http
 
 ![GitHub Actions and EKS: Setting Up EKS worker nodes](/kubernetes-cluster-pipeline-using-github-actions/eks.png)
 
-#### Setting up Kubectl
+#### Setting up GitHub Actions Kubectl for EKS
 
 To run the cluster using the build machine you created using GitHub action, you will need Kubectl. [Kubectl](https://kubernetes.io/docs/tasks/tools/) run commands against Kubernetes clusters to communicate with [Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/).
 
@@ -282,7 +281,7 @@ This step uses the [azure/setup-kubectl](https://github.com/Azure/setup-kubectl)
 
 ![Setting up EKS Kubernetes version](/kubernetes-cluster-pipeline-using-github-actions/version.png)
 
-#### Setting up Cluster Context
+#### Setting up EKS Cluster Context
 
 Kubernetes uses [kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) to find any information such as [namespace](https://earthly.dev/blog/k8s-namespaces/) and clusters related to the Kubernetes API server of a cluster you are using. This is necessary to authenticate and authorize access to your EKS server when interacting with your cluster.
 
@@ -343,7 +342,7 @@ Finally, your Cluster should switch to the context using the above config as fol
 
 Note that `arn:aws:eks:us-west-1:1234567890:cluster/eks_k8s` should reflect your AWS cluster in your config file `context cluster`.
 
-#### Deploying to EKS
+#### Final Stage: GitHub Actions Deploying to EKS
 
 You have everything ready to provision your cluster to EKS. Before doing so, ensure your worker nodes/groups are running and ready. Running the following command should return the nodes that are part of your EKS cluster:
 

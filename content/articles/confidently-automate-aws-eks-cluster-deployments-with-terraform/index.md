@@ -92,7 +92,7 @@ docker push your_dockerhub_username/simple_express_app
 
 In this case, you will use `your_dockerhub_username/simple_express_app` in the coming stage to let the EKS Kubernetes cluster know where your application image is located.
 
-### Configuring AWS
+### Configuring AWS EKS For Terraform
 
 Terraform will provision your infrastructure to AWS. Thus, you need Terraform to execute your AWS credentials and provision your deployment on EKS.
 
@@ -138,7 +138,7 @@ The above command will install the AWS provider and set you up to start running 
 
 ![Confidently Automate AWS EKS Cluster Deployments with Terraform: Terraform init command](/confidently-automate-aws-eks-cluster-deployments-with-terraform/terraform-init-command.png)
 
-### Setting up the AWS EKS Cluster IAM role 
+### Setting up the Terraform AWS EKS Cluster IAM role 
 
 Using AWS EKS UI, you can create your cluster manually. However, in this case, let’s see how we can write code to create the EKS cluster on AWS without manually creating it.
 
@@ -192,7 +192,7 @@ resource "aws_eks_addon" "ebs-csi" {
 }
 ```
 
-#### Creating a VPC
+#### Creating a AWS EKS VPC using Terraform
 
 [VPC (Virtual Private Cloud)](https://earthly.dev/blog/aws-networks/#vpcs) creates an isolated network within the AWS  to launch your AWS resources, such as EKS, on your own private network. This gives you control over resources such as [IP address and subnets](https://earthly.dev/blog/aws-networks/#subnets) to launch your cluster into and securely expose the cluster to your AWS [availability zones](https://earthly.dev/blog/aws-networks/#regions-and-availability-zones). 
 
@@ -250,7 +250,7 @@ module "vpc" {
 
 From above, the private and public subnets should be configured to have at least two availability zones. Multiple availability zones provide high availability and fault tolerance to the resources you provision to AWS. Here `azs  = slice(data.aws_availability_zones.available.names, 0, 2)` tells VPC to select the first two available availability zones in your current region you created earlier using `region  = "your_aws_iam_region_id"`.
 
-#### Creating AWS EKS Cluster Worker Nodes
+#### Creating Terraform AWS EKS Cluster Worker Nodes
 
 [Worker Nodes](https://kubernetes.io/docs/concepts/overview/components/#node-components) runs your application workloads. Worker nodes run within your Kubernetes cluster. For Kubernetes pods to run your workload, it executes containers into Pods that then run on [Nodes](https://kubernetes.io/docs/concepts/architecture/nodes/). Node provides virtual runtime for Kubernetes, and your EKS cluster must have a running node that Kubernetes will use to run your workload.
 
@@ -300,7 +300,7 @@ module "eks" {
 
 Terraform will access your `cluster_name` and use VPC to launch your node groups. In this case, `eks_managed_node_groups` will use default settings to create two managed node groups running on `t3.small` instance types. Once the nodes join the cluster, you can deploy Kubernetes applications to them.
 
-#### Deploy EKS Cluster
+#### Using Terraform to Deploy AWS EKS Cluster
 
 Now that you have the resources needed to create the cluster let’s check how Terraform will create the above example resources. First, run the following command to initialize Terraform directory to ensure all providers are ready:
 
@@ -332,7 +332,7 @@ You also check the same using `kubectl get nodes` as follows:
 
 Everything has worked as expected. You now have a ready EKS cluster; let's now deploy the application to it. 
 
-### Setting up Kubernetes Context and Namespace
+### Setting up AWS EKS Kubernetes Context and Namespace
 
 [Kubernetes context](https://loft.sh/blog/kubectl-get-context-its-uses-and-how-to-get-started/) creates the access parameters to connect to a Kubernetes cluster. These include your cluster name and [namespace](https://earthly.dev/blog/k8s-namespaces/). These details are created using a config file. First, generate one to establish a connection to the cluster contest using your terminal as follows:
 
@@ -359,7 +359,7 @@ resource "kubernetes_namespace" "simple-express-app" {
 
 Terraform will automatically instruct AWS to generate a `config` file and save it in the `~/.kube/config` of the machine running your EKS cluster and add a namespace ` simple-express-app` to organize your resources within the cluster.
 
-### Deploying EKS Deployment Manifest
+### Deploying AWS EKS Deployment Manifest Using Terraform
 
 To run your cluster, Kubernetes uses a deployment resource. Kubernetes deployment resource is equivalent to the [manifest yaml](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/) file you write describing how to deploy your cluster. It contains [Kubernetes Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/) such as replicas, metadata, spec, container, etc.
 
@@ -427,7 +427,7 @@ resource "kubernetes_service" "simple-express-app" {
 
 The `simple-express-app` resource will be created, and it runs `kubernetes_deployment.simple-express-app` created by the deployment manifest. This will expose the application using a `LoadBalancer`; this way, the service will listen to port 80 and port 4000 as the target port the application is listening to.
 
-### Provisioning to EKS Cluster
+### Provisioning to EKS Cluster with Terraform
 
 Up to this point, you have everything you need to provision Terraform to EKS using Terraform. Let’s dive in and now allow Terraform to deploy the infrastructure to AWS. First, ensure you initialize terraform directory to ensure all providers are ready:
 

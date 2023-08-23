@@ -4,7 +4,7 @@ status: publish
 published: true
 url: /how-to-minimize-docker-mages/
 title: How to Minimize and Slim Docker Images - Docker Image Optimization Strategies
-description: This article will teach you the best strategies and tips for slimming down Docker images and reducing their size. So, if you're looking for an easier way to manage your Docker images, this guide is for you!
+description: This article will teach you the best strategies and tips for compress and slimm down Docker images and reducing their size. So, if you're looking for an easier way to manage your Docker images, this guide is for you!
 date: 2023-07-19T00:00:00-12:00
 topics: [DevOps, Docker, Containers]
 pick: [top]
@@ -18,7 +18,7 @@ images:
 Ensuring you have light Docker images speeds up the build and deployment of your Docker containers. There are approaches you can add while building the docker image to reduce its size without affecting performance. This article will teach you the best strategies and tips for slimming down Docker images and reducing their size. So, if you're looking for an easier way to manage your Docker images, this guide is for you!
 <!--more-->
 
-Docker images allow you to easily deploy your applications to different infrastructures such as Kubernetes clusters, Cloud platforms and CI/CD pipelines. The size of these docker images matters when deploying and managing your applications. A large image imposes restrictions that necessitate enlarging storage capacity, resulting in expenses. The size of your application’s Docker image impacts critical aspects such as performance, scalability, portability, and the [potential for security vulnerabilities](https://developers.redhat.com/blog/2016/03/09/more-about-docker-images-size) to arise.
+Docker images allow you to easily deploy your applications to different infrastructures such as Kubernetes clusters, Cloud platforms and CI/CD pipelines. The size of these docker images matters when deploying and managing your applications. A large image imposes restrictions that necessitate enlarging storage capacity, resulting in expenses. The size of your application’s Docker image impacts critical aspects such as performance, scalability, portability, and the [potential for security vulnerabilities](https://developers.redhat.com/blog/2016/03/09/more-about-docker-images-size) to arise telling you you need to compress your Docker image.
 
 Building and pushing large Docker images to a registry such as [DockerHub](https://www.docker.com/products/docker-hub/) and [ECR](https://aws.amazon.com/ecr/) requires a significant amount of time. Additionally, a large image also slows downloads whenever you need to pull the application image from the registry resulting in increased time to build and deploy your application. Lets dive in and learn the best strategies to slim Docker images and how to use them to reduce Docker image size
 
@@ -33,7 +33,7 @@ To Minimize and Slim Docker Images, ensure:
 
 Optimizing and reducing your Docker images to the smallest size significantly reduce the cost and time spent building and pushing images. In this section, we will discuss different strategies to slim down Docker images and reduce size.
 
-Before then, You need to create a Docker image you will work.
+Before then, You need to create a compress Docker image example that you will work.
 
 #### Creating a Sample Docker Image
 
@@ -113,12 +113,12 @@ While creating the above images, the `COPY . .` command copy all the files and f
 
 ![How to Minimize and Slim Docker Images: File Structure](/how-to-minimize-docker-mages/dockerignore.png)
 
-Looking closely, Docker doesn’t need to copy all these folders and files. For example, the`RUN npm run build` command in the DockerFile will create the application *build* folder, and the `RUN npm install` command will create the *node_modules* folder. Therefore, you don’t need to copy these files while building the Docker image.
+Looking closely, Docker doesn’t need to copy all these folders and files. For example, the`RUN npm run build` command in the DockerFile will create the application `build`` folder, and the `RUN npm install` command will create the `node_modules`` folder. Therefore, you don’t need to copy these files while building the Docker image.
 Each folder and file copied add to the size of the image. It is best to avoid unnecessary copy. 
 
 The `.dockerignore` file allows you to specify files and directories that should be excluded from the context used to build a Docker image. To use it, create a  `.dockerignore` file in the same directory as your Dockerfile and add the files and the directories that are not needed for the image build process.
 
-Add the following in your *.dockerignore* file:
+Add the following in your *`.dockerignore`* file:
 
 ```bash
 node_modules
@@ -287,9 +287,9 @@ Now, with the new found knowledge, why not [Automate and Deploy Kubernetes CICD 
 Docker ensures you package your applications for easier portability across different infrastructures such as Kubernetes clusters, Cloud platforms and CI/CD pipelines. This makes pushing changes to the existing application easier while sharing it with varying environments without affecting compatibility. Given that Docker image sizes can consume large disk sizes, in this guide, you learned the following Docker image optimization strategies:
 
 - Using the .dockerignore file
-- Reducing Docker image layers
+- Reducing and compressing Docker image layers
 - How to choose Docker base images
 - How to use multistage build to Docker reduce image size
 - Tools to reduce Docker image size
 
-Using these strategies, you managed to reduce the Docker image of 1.16GB  to 162MB. You have learned the tools and tips that you need to use to reduce Docker image size to approximately 85.86%. I hope you found this post helpful.
+Using these strategies, you managed to compress and reduce the Docker image of 1.16GB  to 162MB. You have learned the tools and tips that you need to use to reduce Docker image size to approximately 85.86%. I hope you found this post helpful.
