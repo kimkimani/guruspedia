@@ -15,6 +15,7 @@ images:
 
 [React Native](https://reactnative.dev/) allows you to create dialogs UI elements. Dialogs are used to display important information or ask for user input. React Native provides a built-in [Modal](https://reactnative.dev/docs/modal) component. It allows you to create custom dialogs for your react application. A dialog component
 displays content on top of the current screen. It can be dismissed based on user actions.
+<!--more-->
 
 This article will guide you and teach you how to create and utilize custom dialogs in React Native.
 
