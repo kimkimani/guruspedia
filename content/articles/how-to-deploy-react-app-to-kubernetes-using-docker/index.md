@@ -14,7 +14,7 @@ images:
     alt: How to Deploy React Apps to Kubernetes Using Docker
 ---
 
-[The concept of Containers and Containerization](https://guruspedia.com/understanding-the-concept-of-containers-and-containerization/) helps you run the application as lightweight virtual machines. As a Web Developer, setting up local development environments can be tiresome. Using infrastructures such as Docker and Kubernetes gives a developer an upper hand to quickly set up and deploy applications. This guide uses Docker to deploy a React app to Kubernetes.
+The concept of Containers and Containerization helps you run the application as lightweight virtual machines. As a Web Developer, setting up local development environments can be tiresome. Using infrastructures such as Docker and Kubernetes gives a developer an upper hand to quickly set up and deploy applications. This guide uses Docker to deploy a React app to Kubernetes.
 <!--more-->
 
 ### Essentials

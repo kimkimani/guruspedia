@@ -319,7 +319,7 @@ As you see, the test passed as expected. This component is executed correctly. T
 
 ![](tests.png)
 
-Now that you have mastered How to Test Next.js Applications with Jest, why not dive deeper and take your Next.js skills to new heights and learn [How to Create a Next.js Markdown Blog using MDX and TailwindCSS](https://guruspedia.com/creating-nextjs-markdown-blog-using-mdx-and-tailwindcss/)? You will love it.
+Now that you have mastered How to Test Next.js Applications with Jest, why not dive deeper and take your Next.js testing skills to new heights and learn [Testing environments vs Staging environments](https://guruspedia.com/staging-vs-test-environments-whats-the-differences) and how to use them? You will love it.
 
 ### Conclusion
 
