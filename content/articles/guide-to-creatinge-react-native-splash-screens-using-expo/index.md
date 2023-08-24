@@ -3,7 +3,7 @@ layout: blog
 status: publish
 published: true
 url: /guide-to-creatinge-react-native-splash-screens-using-expo/
-title: Guide to Creating React Native Splash Screens Using Expo
+title: Guide to Creating Expo React Native Splash Screens
 description: Implement a splash screen on a React Native EXPO application. LIKE A PRO. You will will implement a Splash screen loading the logo of a React Native app.
 date: 2023-08-07T01:43:57-04:00
 topics: [React Native]
