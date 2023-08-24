@@ -3,19 +3,19 @@ layout: blog
 status: publish
 published: true
 url: /guide-to-creatinge-react-native-splash-screens-using-expo/
-title: Guide to Creatinge React Native Splash Screens Using Expo
+title: Guide to Creating React Native Splash Screens Using Expo
 description: Implement a splash screen on a React Native EXPO application. LIKE A PRO. You will will implement a Splash screen loading the logo of a React Native app.
 date: 2023-08-07T01:43:57-04:00
 topics: [React Native]
 excerpt_separator: <!--more-->
 images:
   - url: /guide-to-creatinge-react-native-splash-screens-using-expo/hero.jpg
-    alt: Guide to Creatinge React Native Splash Screens Using Expo
+    alt: Guide to Creating React Native Splash Screens Using Expo
 ---
 
 In this article, you will implement a splash screen on an expo application. A splash screen is the first screen displayed on the mobile application. It is typically non-interactive while the application is loading.
 
-Splash screens display the name or logo of the application. Splash screens can also be used to provide a progress bar or animation to indicate how much of the loading process has been completed. However, we will implement a Splash screen that loads the logo of an application.
+Expo Splash screens display the name or logo of the application. Splash screens can also be used to provide a progress bar or animation to indicate how much of the loading process has been completed. However, we will implement a Splash screen that loads the logo of an application.
 <!--more-->
 
 We will use the following:
@@ -26,12 +26,12 @@ We will use the following:
 
 ### **Prerequisites**
 
-To follow along with this article, it will be essential to have the following tools:
+To create an Expo Splash screen with this article, it will be essential to have the following tools:
 
 - [Node.js](https://nodejs.org/en/) installed on your computer.
 - Prior experience working with JavaScript.
 
-### **Setting up the project**
+### **Setting up Expo Splash screen project**
 
 Create a directory that will host your project locally. Proceed to your created working directory. Go ahead and run the following command to initialize a basic React Native project using Expo:
 
@@ -51,7 +51,7 @@ Run the following command to install the expo-splash-screen library to your proj
 npx expo install expo-splash-screen
 ```
 
-### **Creating Splash Screen Assets**
+### **Creating Expo Splash Screen Assets**
 
 We will create an icon as an image asset for our splash screen.
 
@@ -61,11 +61,11 @@ To generate the icon:
 
 - Once you download the icon, your image should resemble the one below based on the icon and the background color:
 
-![Guide to Creatinge React Native Splash Screens Using Expo](/guide-to-creatinge-react-native-splash-screens-using-expo/image2.png)
+![Guide to Creating React Native Splash Screens Using Expo](/guide-to-creatinge-react-native-splash-screens-using-expo/image2.png)
 
 -  Save the image on the assets directory of the project directory.
 
-### **Showing the splash screen**
+### **Showing the splash screen on Expo**
 
 Navigate to your application `App.js` file and add the following changes:
 
@@ -165,9 +165,9 @@ This will ensure Expo is able to load the asset we have added. At this point, th
 npm run start
 ```
 
-![Guide to Creatinge React Native Splash Screens Using Expo](/guide-to-creatinge-react-native-splash-screens-using-expo/image2.png)
+![Guide to Creating React Native Splash Screens Using Expo](/guide-to-creatinge-react-native-splash-screens-using-expo/image2.png)
 
-### Adding the splash screen on Android
+### **Adding the Expo splash screen on Android**
 
 Apart from the above configuration, on Android, you can customize the splash screen, i.e., you can set various splash images for different device DPIs, i.e., mdpi, hdpi, xhdpi, xxhdpi, xxxhdpi.
 
@@ -202,7 +202,7 @@ The scales will vary as follows:
 
 The customizations will vary based on your device.
 
-### Adding the splash screen on IOS**
+### **Adding the Expo splash screen on IOS**
 
 Apart from the general customizations, on IOS, you can add the `tabletImage` setting as follows:
 
@@ -219,11 +219,11 @@ Apart from the general customizations, on IOS, you can add the `tabletImage` set
 }
 ```
 
-Congratulations on Creatinge React Native Splash Screens Using Expo. Take your React Native skills to new heights and learn [How to Create Custom Dialogs in React Native](https://guruspedia.com/custom-dialogs-using-react-native/) like a pro. You will love it.
+Congratulations on Creating React Native Splash Screens Using Expo. Take your React Native skills to new heights and learn [How to Create Custom Dialogs in React Native](https://guruspedia.com/custom-dialogs-using-react-native/) like a pro. You will love it.
 
 ### Conclusion
 
-You now learned how to creatinge React Native Splash Screens Using Expo. For further understanding of the topic, consider the following references:
+You now learned how to create Expo React Native Splash Screens. For further understanding of the topic, consider the following references:
 
 -   [Creating Splash Screen Asset vianFigma](https://www.youtube.com/watch?v=QSNkU7v0MPc&t=1s&ab_channel=Expo)
 -   [IOS Caching of launch screens](https://docs.expo.dev/guides/splash-screens/#ios-caching)
