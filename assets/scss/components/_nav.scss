@@ -72,7 +72,8 @@ body {
 
   .section-logo {
     margin-right: pxem(25);
-
+    font-weight: bold;
+    @extend .text-20-regular;
     @include mq($from: 1290px) {
       margin-right: pxem(30);
     }
@@ -236,9 +237,11 @@ body {
     &-inner {
       display: none;
 
-      h3 {
+      p {
         display: flex;
         align-items: center;
+        font-weight: bold;
+        //@extend .text-20-regular;
 
         i {
           margin-right: 10px;
