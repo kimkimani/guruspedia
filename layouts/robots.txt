@@ -6,9 +6,9 @@ Disallow: /feedback/tg20/
 Disallow: /feedback/thanks/
 Disallow: /feedback/flyer/
 Disallow: /error/
-Disallow: /about/
+
 Disallow: /cdn-cgi/l/email-protection/
-Disallow: /contact/
+
 Disallow: /home-alt/
 Disallow: /csrfToken*
 
