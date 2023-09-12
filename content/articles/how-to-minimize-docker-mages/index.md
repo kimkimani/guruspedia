@@ -8,6 +8,7 @@ description: This article will teach you the best strategies and tips for compre
 date: 2023-07-19T00:00:00-12:00
 topics: [DevOps, Docker, Containers]
 pick: [top]
+author: joseph-chege
 excerpt_separator: <!--more-->
 images:
 

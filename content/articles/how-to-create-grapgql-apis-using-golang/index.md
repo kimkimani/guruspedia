@@ -8,6 +8,7 @@ description: This tutorial will teach you how to create GraphQL APIs using Golan
 date: 2023-07-20T00:00:00-12:00
 topics: [Coding, Golang, GraphQL, API] 
 pick: [top]
+author: joseph-chege
 excerpt_separator: <!--more-->
 images:
   - url: /how-to-create-grapgql-apis-using-golang/hero.png

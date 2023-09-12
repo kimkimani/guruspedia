@@ -8,6 +8,7 @@ description: In this article, you'll learn all about Terraform functions, with e
 date: 2023-07-25T05:08:03-04:00
 topics: [Terraform, DevOps]
 pick: [top]
+author: joseph-chege
 excerpt_separator: <!--more-->
 images:
 
